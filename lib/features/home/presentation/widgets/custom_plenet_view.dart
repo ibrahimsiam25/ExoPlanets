@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
 import 'package:exo_planets/features/home/data/static/static_planet_data.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomPlanetView extends StatelessWidget {
   final PageController pageController;
@@ -37,6 +37,7 @@ class CustomPlanetView extends StatelessWidget {
               itemCount: planetData.length,
               itemBuilder: (context, index) {
                 return Flutter3DViewer(
+                  progressBarColor: Colors.transparent,
                   src: planetData[index].model3DPath,
                 );
               },
