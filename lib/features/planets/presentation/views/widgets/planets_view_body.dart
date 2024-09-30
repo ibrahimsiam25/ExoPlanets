@@ -62,7 +62,7 @@ class _PlanetsViewBodyState extends State<PlanetsViewBody> {
             ],
           ),
         ),
-        vGap(10),
+        vGap(20),
         Expanded(
           child: Stack(
             children: [
