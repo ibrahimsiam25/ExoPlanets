@@ -114,7 +114,7 @@ class _PlanetsViewBodyState extends State<PlanetsViewBody> {
             ),
           ),
           Positioned(
-            top:context.height * 0.75,
+            top: context.height * 0.75,
             left: 50,
             child: SizedBox(
               height: 50.h,

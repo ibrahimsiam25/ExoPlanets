@@ -3,10 +3,10 @@ import '../../../../core/helpers/app_assets.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class CustomNavigationRow extends StatelessWidget {
-  final String title;    
-  final String subtitle;   
-  final VoidCallback onPreviousPage; 
-  final VoidCallback onNextPage;     
+  final String title;
+  final String subtitle;
+  final VoidCallback onPreviousPage;
+  final VoidCallback onNextPage;
 
   const CustomNavigationRow({
     super.key,
@@ -22,14 +22,14 @@ class CustomNavigationRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          iconSize: 50.0, 
+          iconSize: 50.0,
           icon: Image.asset(AppAssets.leftbuttonIcon),
-          onPressed: onPreviousPage, 
+          onPressed: onPreviousPage,
         ),
         Column(
           children: [
             Text(
-              title.toUpperCase(),  
+              title.toUpperCase(),
               style: AppTextStyles.font28VeryLightGrayW500,
             ),
             Text(
@@ -39,9 +39,9 @@ class CustomNavigationRow extends StatelessWidget {
           ],
         ),
         IconButton(
-          iconSize: 50.0, 
-          icon: Image.asset(AppAssets.rightbuttonIcon), 
-          onPressed: onNextPage, 
+          iconSize: 50.0,
+          icon: Image.asset(AppAssets.rightbuttonIcon),
+          onPressed: onNextPage,
         ),
       ],
     );

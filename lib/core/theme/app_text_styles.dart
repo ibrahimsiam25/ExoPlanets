@@ -2,7 +2,6 @@ import 'app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class LatoTextStyle extends TextStyle {
   const LatoTextStyle({
     super.fontSize,
@@ -121,24 +120,24 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.lightGrey9A,
   );
-    static TextStyle font14GreyW400 = LatoTextStyle(
+  static TextStyle font14GreyW400 = LatoTextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     color: AppColors.textGrey,
   );
-      static TextStyle font24WhiteW600 = LatoTextStyle(
+  static TextStyle font24WhiteW600 = LatoTextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.w600,
     color: AppColors.white,
   );
-    static TextStyle font27LightGreyW600 = LatoTextStyle(
+  static TextStyle font27LightGreyW600 = LatoTextStyle(
     fontSize: 27.sp,
     fontWeight: FontWeight.w600,
-    color: AppColors.lightGreyEC ,
+    color: AppColors.lightGreyEC,
   );
-    static TextStyle font20WhiteW500 = LatoTextStyle(
+  static TextStyle font20WhiteW500 = LatoTextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
-    color: AppColors.white, 
+    color: AppColors.white,
   );
 }

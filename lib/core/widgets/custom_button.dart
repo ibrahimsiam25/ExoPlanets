@@ -9,7 +9,6 @@ import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/widgets/inner_shadow.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;

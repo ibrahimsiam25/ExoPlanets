@@ -13,7 +13,7 @@ class QuizQuestionNumberCloseRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Q&A 2",
+          "Q&A",
           style: AppTextStyles.font22WhiteW600,
         ),
         InkWell(
