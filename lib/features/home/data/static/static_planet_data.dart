@@ -1,7 +1,6 @@
 import '../model/planet_moodel.dart';
 import '../../../../core/helpers/app_assets.dart';
 
-
 List<PlanetModel> planetData = [
   PlanetModel(
     title: "PROXIMA B",

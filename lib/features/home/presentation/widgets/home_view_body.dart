@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../manager/home_cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
@@ -8,6 +7,7 @@ import 'package:exo_planets/features/home/presentation/widgets/custom_plenet_vie
 import 'package:exo_planets/features/home/presentation/widgets/custom_home_app_bar.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_navigation_row.dart';
 
+import '../manager/home_cubit/home_cubit.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
         child: BlocBuilder<HomeCubit, int>(
           builder: (context, currentPage) {
             final pageController = PageController(initialPage: currentPage);
-            
+
             void nextPage() {
               context.read<HomeCubit>().nextPage(planetData.length);
               pageController.animateToPage(
@@ -47,7 +47,7 @@ class HomeViewBody extends StatelessWidget {
                 const CustomHomeAppBar(),
                 vGap(40),
                 Text(
-                  "HiAdel,",
+                  "Hi Adel,",
                   style: AppTextStyles.font14GrayW400,
                 ),
                 Text(
@@ -66,14 +66,16 @@ class HomeViewBody extends StatelessWidget {
                     ),
                   ],
                 ),
+                vGap(27),
                 CustomPlanetView(pageController: pageController),
+                vGap(49),
                 CustomNavigationRow(
                   title: planetData[currentPage].title,
                   subtitle: planetData[currentPage].subtitle,
                   onPreviousPage: previousPage,
                   onNextPage: nextPage,
                 ),
-                const SizedBox(height: 16),
+                vGap(16)
               ],
             );
           },
