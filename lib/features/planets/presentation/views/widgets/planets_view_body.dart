@@ -1,9 +1,8 @@
-import 'package:exo_planets/core/helpers/extensions.dart';
-import 'package:exo_planets/features/planets/presentation/planets%20cubit/planets_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theme/app_text_styles.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/widgets/custom_text_button.dart';
@@ -12,6 +11,7 @@ import 'package:exo_planets/core/static/static_planet_data.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/Planet_info_card.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/custom_rich_text.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/planets_page_view.dart';
+import 'package:exo_planets/features/planets/presentation/manager/planets%20cubit/planets_cubit.dart';
 
 class PlanetsViewBody extends StatefulWidget {
   const PlanetsViewBody({super.key});
@@ -114,7 +114,7 @@ class _PlanetsViewBodyState extends State<PlanetsViewBody> {
             ),
           ),
           Positioned(
-            top: 610.h,
+            top:context.height * 0.75,
             left: 50,
             child: SizedBox(
               height: 50.h,

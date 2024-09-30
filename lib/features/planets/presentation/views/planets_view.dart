@@ -1,9 +1,9 @@
-import 'package:exo_planets/features/planets/presentation/planets%20cubit/planets_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/helpers/app_assets.dart';
 import 'package:exo_planets/core/widgets/custom_scaffold.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/planets_view_body.dart';
+import 'package:exo_planets/features/planets/presentation/manager/planets%20cubit/planets_cubit.dart';
 
 class PlanetsView extends StatelessWidget {
   const PlanetsView({super.key});
