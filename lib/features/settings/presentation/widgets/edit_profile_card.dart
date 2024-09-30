@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/settings/presentation/widgets/settings_profile_avatar.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EditProfileCard extends StatelessWidget {
   const EditProfileCard({
@@ -37,7 +37,7 @@ class EditProfileCard extends StatelessWidget {
           SizedBox(
             width: 36.0.w,
             child: const Divider(
-              color: AppColors.ligtGray,
+              color: AppColors.lightGrey9A,
               thickness: 2.0,
               height: 0.0,
             ),
