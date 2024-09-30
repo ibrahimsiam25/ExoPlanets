@@ -1,11 +1,11 @@
+import '../helpers/spacing.dart';
+import '../theme/app_colors.dart';
+import '../helpers/app_assets.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/helpers/app_assets.dart';
 
 
-class CustomHomeAppBar extends StatelessWidget {
-  const CustomHomeAppBar({
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({
     super.key,
   });
 

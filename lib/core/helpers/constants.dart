@@ -1,12 +1,13 @@
-import 'package:exo_planets/core/helpers/app_assets.dart';
-import 'package:exo_planets/core/theme/app_colors.dart';
-import 'package:exo_planets/core/theme/app_text_styles.dart';
-import 'package:exo_planets/features/settings/presentation/views/settings_view.dart';
-import 'package:exo_planets/features/quiz/presentation/views/select_quiz_view.dart';
 import 'package:flutter/material.dart';
-
+import 'package:exo_planets/core/theme/app_colors.dart';
+import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:exo_planets/core/theme/app_text_styles.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/onboarding/presentation/ui model/on_boarding_item.dart';
+import 'package:exo_planets/features/planets/presentation/views/planets_view.dart';
+import 'package:exo_planets/features/quiz/presentation/views/select_quiz_view.dart';
+import 'package:exo_planets/features/settings/presentation/views/settings_view.dart';
+
 
 class Constants {
   const Constants._();
@@ -82,11 +83,7 @@ class Constants {
 
   static const List<Widget> bottomNavBarViews = [
     HomeView(),
-    Scaffold(
-      body: Center(
-        child: Text('Planets View'),
-      ),
-    ),
+    PlanetsView(),
     SelectQuizView(),
     SettingsView(),
   ];

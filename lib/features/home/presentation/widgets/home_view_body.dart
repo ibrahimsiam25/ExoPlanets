@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import '../manager/home_cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
-import 'package:exo_planets/features/home/data/static/static_planet_data.dart';
+import 'package:exo_planets/core/widgets/custom_app_bar.dart';
+import 'package:exo_planets/core/static/static_planet_data.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_plenet_view.dart';
-import 'package:exo_planets/features/home/presentation/widgets/custom_home_app_bar.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_navigation_row.dart';
 
-import '../manager/home_cubit/home_cubit.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -44,7 +44,7 @@ class HomeViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 vGap(16),
-                const CustomHomeAppBar(),
+                const CustomAppBar(),
                 vGap(40),
                 Text(
                   "Hi Adel,",

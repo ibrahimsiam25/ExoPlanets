@@ -29,11 +29,11 @@ class CustomNavigationRow extends StatelessWidget {
         Column(
           children: [
             Text(
-              title,  
+              title.toUpperCase(),  
               style: AppTextStyles.font28VeryLightGrayW500,
             ),
             Text(
-              subtitle,
+              subtitle.toUpperCase(),
               style: AppTextStyles.font12LightGrayW400,
             ),
           ],

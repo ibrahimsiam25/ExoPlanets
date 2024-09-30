@@ -1,9 +1,9 @@
-import 'package:exo_planets/core/routes/app_router.dart';
-import 'package:exo_planets/core/theme/app_theme.dart';
+import 'core/helpers/app_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:exo_planets/core/theme/app_theme.dart';
+import 'package:exo_planets/core/routes/app_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'core/helpers/app_assets.dart';
 
 class ExoPlanetsApp extends StatelessWidget {
   const ExoPlanetsApp({super.key});
@@ -24,7 +24,7 @@ class ExoPlanetsApp extends StatelessWidget {
         title: "Exo Planets",
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: AppRouter.splash,
+        initialRoute: AppRouter.bottomNavigationBar,
       ),
     );
   }

@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScaffold(
-      backgroundImage: AppAssets.homeBackGround,
+      backgroundImage: AppAssets.spaceBackGround,
       body: HomeViewBody(),
     );
   }

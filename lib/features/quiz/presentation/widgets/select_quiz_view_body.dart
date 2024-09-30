@@ -1,11 +1,11 @@
-import 'package:exo_planets/core/helpers/constants.dart';
-import 'package:exo_planets/core/theme/app_text_styles.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/helpers/spacing.dart';
-import '../../../home/presentation/widgets/custom_home_app_bar.dart';
 import 'planet_quiz_item.dart';
+import 'package:flutter/material.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
+import 'package:exo_planets/core/helpers/constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:exo_planets/core/theme/app_text_styles.dart';
+
 
 class SelectQuizViewBody extends StatelessWidget {
   const SelectQuizViewBody({super.key});
@@ -17,7 +17,7 @@ class SelectQuizViewBody extends StatelessWidget {
       child: Column(
         children: [
           vGap(16),
-          const CustomHomeAppBar(),
+          const CustomAppBar(),
           vGap(18),
           Text(
             "Discover how close you are to becoming an expert in the mysteries of the universe!",
