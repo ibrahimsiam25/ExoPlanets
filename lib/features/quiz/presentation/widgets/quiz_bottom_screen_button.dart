@@ -16,30 +16,33 @@ class QuizBottomScreenButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(vertical: 24.h),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.r),
-        gradient: Constants.customRedGradient,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        alignment: Alignment.center,
+        padding: EdgeInsets.symmetric(vertical: 24.h),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.r),
+          gradient: Constants.customRedGradient,
+        ),
+        child: child ??
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Next",
+                  style: AppTextStyles.font20WhiteW600,
+                ),
+                hGap(5),
+                SvgPicture.asset(
+                  AppAssets.arrowForward,
+                  height: 14.h,
+                  width: 22.w,
+                )
+              ],
+            ),
       ),
-      child: child ??
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                "Next",
-                style: AppTextStyles.font20WhiteW600,
-              ),
-              hGap(5),
-              SvgPicture.asset(
-                AppAssets.arrowForward,
-                height: 14.h,
-                width: 22.w,
-              )
-            ],
-          ),
     );
   }
 }

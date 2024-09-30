@@ -27,6 +27,10 @@ class AppAssets {
   static const String vestaQuiz = 'assets/images/vestaQuiz.png';
   static const String waspQuiz = 'assets/images/WaspQuiz.png';
   static const String earthImage = 'assets/images/earthImage.png';
+  static const String starStroke = 'assets/images/starStroke.png';
+  static const String starFill = 'assets/images/starFill.png';
+  static const String trophy = 'assets/images/trophy.png';
+  static const String rocket = 'assets/images/rocket.png';
 
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
