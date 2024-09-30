@@ -30,8 +30,7 @@ class CustomScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       appBar: appBar,
       key: scaffoldKey,
       body: SingleChildScrollView(
@@ -51,7 +50,7 @@ class CustomScaffold extends StatelessWidget {
                   )
                 : null,
           ),
-          child: body,
+          child: body!,
         ),
       ),
       bottomNavigationBar: bottomNavigationBar,
@@ -62,6 +61,6 @@ class CustomScaffold extends StatelessWidget {
       floatingActionButtonAnimator: floatingActionButtonAnimator,
       floatingActionButtonLocation: floatingActionButtonLocation,
       resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
-    ));
+    );
   }
 }

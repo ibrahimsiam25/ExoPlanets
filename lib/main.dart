@@ -17,6 +17,8 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarColor: Colors.transparent,
     ),
   );
   // make flutter draw behind navigation bar
