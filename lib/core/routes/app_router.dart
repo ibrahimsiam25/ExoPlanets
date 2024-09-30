@@ -8,6 +8,8 @@ import 'package:exo_planets/features/onboarding/presentation/views/onboarding_vi
 import 'package:exo_planets/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../features/quiz/presentation/views/quiz_view.dart';
+
 class AppRouter {
   static const String onboarding = '/onboarding';
   static const String splash = '/';
@@ -15,6 +17,7 @@ class AppRouter {
   static const String auth = '/auth';
   static const String logIn = '/logIn';
   static const String signUp = '/signUp';
+  static const String quiz = '/quiz';
   static const String forgotPassword = '/forgotPassword';
   static const String bottomNavigationBar = '/bottomNavigationBar';
 
@@ -36,6 +39,8 @@ class AppRouter {
         return _viewMaterialRoute(view: const BottomNavBarController());
       case home:
         return _viewMaterialRoute(view: const HomeView());
+      case quiz:
+        return _viewMaterialRoute(view: const QuizView());
       default:
         return null;
     }

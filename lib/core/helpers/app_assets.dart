@@ -20,6 +20,12 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
+  static const String proximaQuiz = 'assets/images/proximaQuiz.png';
+  static const String erisQuiz = 'assets/images/erisQuiz.png';
+  static const String cancri55Quiz = 'assets/images/Cancri55Quiz.png';
+  static const String kepler22Quiz = 'assets/images/kepler22Quiz.png';
+  static const String vestaQuiz = 'assets/images/vestaQuiz.png';
+  static const String waspQuiz = 'assets/images/WaspQuiz.png';
 
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";

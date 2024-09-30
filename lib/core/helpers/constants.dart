@@ -1,6 +1,7 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
+import 'package:exo_planets/features/quiz/presentation/views/select_quiz_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/home/presentation/views/home_view.dart';
@@ -85,11 +86,7 @@ class Constants {
         child: Text('Planets View'),
       ),
     ),
-    Scaffold(
-      body: Center(
-        child: Text('Quiz View'),
-      ),
-    ),
+    SelectQuizView(),
     Scaffold(
       body: Center(
         child: Text('Settings View'),
@@ -108,5 +105,13 @@ class Constants {
     'Planets',
     'Quiz',
     'Settings',
+  ];
+  static const List<String> quizImages = [
+    AppAssets.proximaQuiz,
+    AppAssets.waspQuiz,
+    AppAssets.cancri55Quiz,
+    AppAssets.kepler22Quiz,
+    AppAssets.erisQuiz,
+    AppAssets.vestaQuiz
   ];
 }
