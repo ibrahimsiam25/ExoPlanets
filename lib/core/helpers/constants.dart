@@ -1,6 +1,7 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
+import 'package:exo_planets/features/settings/presentation/views/settings_view.dart';
 import 'package:exo_planets/features/quiz/presentation/views/select_quiz_view.dart';
 import 'package:flutter/material.dart';
 
@@ -87,11 +88,7 @@ class Constants {
       ),
     ),
     SelectQuizView(),
-    Scaffold(
-      body: Center(
-        child: Text('Settings View'),
-      ),
-    ),
+    SettingsView(),
   ];
 
   static const List<String> images = [
