@@ -1,10 +1,13 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_bottom_screen_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../../core/routes/app_router.dart';
 
 class QuizBottomScreenActions extends StatelessWidget {
   const QuizBottomScreenActions({super.key});
@@ -40,7 +43,11 @@ class QuizBottomScreenActions extends StatelessWidget {
         hGap(20),
         Expanded(
           child: QuizBottomScreenButton(
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(
+                AppRouter.quizResult,
+              );
+            },
             index: 1,
           ),
         ),
