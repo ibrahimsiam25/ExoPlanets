@@ -34,13 +34,34 @@ class CustomScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar,
-      key: scaffoldKey,
-      body: hasSingleChildScrollView
-          ? SingleChildScrollView(
-              physics: const NeverScrollableScrollPhysics(),
-              child: Container(
+    return SafeArea(
+      bottom: false,
+      child: Scaffold(
+        appBar: appBar,
+        key: scaffoldKey,
+        body: hasSingleChildScrollView
+            ? SingleChildScrollView(
+                physics: const NeverScrollableScrollPhysics(),
+                child: Container(
+                  height: height ??
+                      MediaQuery.of(context).size.height +
+                          MediaQuery.of(context).viewPadding.bottom +
+                          MediaQuery.of(context).viewPadding.top,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    image: backgroundImage != null
+                        ? DecorationImage(
+                            image: AssetImage(
+                              backgroundImage!,
+                            ),
+                            fit: BoxFit.cover,
+                          )
+                        : null,
+                  ),
+                  child: body,
+                ),
+              )
+            : Container(
                 height: height ??
                     MediaQuery.of(context).size.height +
                         MediaQuery.of(context).viewPadding.bottom +
@@ -58,33 +79,15 @@ class CustomScaffold extends StatelessWidget {
                 ),
                 child: body,
               ),
-            )
-          : Container(
-              height: height ??
-                  MediaQuery.of(context).size.height +
-                      MediaQuery.of(context).viewPadding.bottom +
-                      MediaQuery.of(context).viewPadding.top,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                image: backgroundImage != null
-                    ? DecorationImage(
-                        image: AssetImage(
-                          backgroundImage!,
-                        ),
-                        fit: BoxFit.cover,
-                      )
-                    : null,
-              ),
-              child: body,
-            ),
-      bottomNavigationBar: bottomNavigationBar,
-      bottomSheet: bottomSheet,
-      drawer: drawer,
-      extendBody: extendBody,
-      floatingActionButton: floatingActionButton,
-      floatingActionButtonAnimator: floatingActionButtonAnimator,
-      floatingActionButtonLocation: floatingActionButtonLocation,
-      resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
+        bottomNavigationBar: bottomNavigationBar,
+        bottomSheet: bottomSheet,
+        drawer: drawer,
+        extendBody: extendBody,
+        floatingActionButton: floatingActionButton,
+        floatingActionButtonAnimator: floatingActionButtonAnimator,
+        floatingActionButtonLocation: floatingActionButtonLocation,
+        resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
+      ),
     );
   }
 }
