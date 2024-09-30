@@ -33,7 +33,11 @@ class QuizBottomScreenButton extends StatelessWidget {
                 style: AppTextStyles.font20WhiteW600,
               ),
               hGap(5),
-              SvgPicture.asset(AppAssets.arrowForward)
+              SvgPicture.asset(
+                AppAssets.arrowForward,
+                height: 14.h,
+                width: 22.w,
+              )
             ],
           ),
     );

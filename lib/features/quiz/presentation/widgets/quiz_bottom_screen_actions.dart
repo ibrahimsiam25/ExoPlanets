@@ -3,6 +3,7 @@ import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_bottom_screen_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class QuizBottomScreenActions extends StatelessWidget {
@@ -21,7 +22,11 @@ class QuizBottomScreenActions extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SvgPicture.asset(AppAssets.arrowBack),
+                  SvgPicture.asset(
+                    AppAssets.arrowBack,
+                    height: 14.h,
+                    width: 22.w,
+                  ),
                   hGap(5),
                   Text(
                     "Back",
