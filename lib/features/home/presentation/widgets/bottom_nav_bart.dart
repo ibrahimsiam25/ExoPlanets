@@ -1,9 +1,10 @@
 import 'package:exo_planets/core/helpers/constants.dart';
-import 'package:exo_planets/core/theme/app_colors.dart';
+import 'package:exo_planets/core/widgets/custom_scaffold.dart';
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bar_background.dart';
 import 'package:exo_planets/features/home/presentation/widgets/leaders_board_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'bottom_nav_bar_item.dart';
 
 class BottomNavBarController extends StatefulWidget {
@@ -17,8 +18,7 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.black,
+    return CustomScaffold(
       extendBody: true,
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(16.0.r),
@@ -72,7 +72,10 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
           ),
         ),
       ),
-      body: IndexedStack(index: index, children: Constants.bottomNavBarViews),
+      body: IndexedStack(
+        index: index,
+        children: Constants.bottomNavBarViews,
+      ),
     );
   }
 }
