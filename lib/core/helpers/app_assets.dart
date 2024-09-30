@@ -19,6 +19,14 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
+
+  static const String avatarTest = 'assets/images/avatar_test.jpg';
+  static const String prefs = 'assets/images/preferences.png';
+  static const String help = 'assets/images/help.png';
+  static const String feed = 'assets/images/feedback.png';
+  static const String logout = 'assets/images/logout.png';
+  static const String pencil = 'assets/images/pencil.png';
+
   static const String proximaQuiz = 'assets/images/proximaQuiz.png';
   static const String erisQuiz = 'assets/images/erisQuiz.png';
   static const String cancri55Quiz = 'assets/images/Cancri55Quiz.png';
@@ -65,4 +73,5 @@ class AppAssets {
   static const String homeIcon = 'assets/svgs/homeIcon.svg';
 
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
+  static const String profileAvatar = 'assets/svgs/profile_avatar.svg';
 }
