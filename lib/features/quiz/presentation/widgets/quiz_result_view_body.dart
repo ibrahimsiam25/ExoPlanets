@@ -21,7 +21,7 @@ class QuizResultViewBody extends StatelessWidget {
         vGap(90),
         Align(
             alignment: Alignment.center,
-            child: Text(score > 4 ? "Victory" : "Defeat",
+            child: Text(score >= 4 ? "Victory" : "Defeat",
                 style: AppTextStyles.font40RedW600)),
         vGap(90),
         ResultContainer(

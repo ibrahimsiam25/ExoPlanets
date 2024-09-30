@@ -51,49 +51,65 @@ class _QuizViewBodyState extends State<QuizViewBody> {
   @override
   Widget build(BuildContext context) {
     return QuizViewsBackground(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          vGap(25),
-          const QuizQuestionNumberCloseRow(),
-          vGap(40),
-          Text(
-            "Question ${currentQuestionIndex + 1}",
-            style: AppTextStyles.font12WhiteW600,
+        child: CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              vGap(25),
+              const QuizQuestionNumberCloseRow(),
+              vGap(40),
+              Text(
+                "Question ${currentQuestionIndex + 1}",
+                style: AppTextStyles.font12WhiteW600,
+              ),
+              vGap(5),
+              Text(
+                widget.questions[currentQuestionIndex].question,
+                style: AppTextStyles.font28WhiteW700,
+              ),
+              vGap(40),
+              BlocBuilder<AnswerCubit, AnswerState>(
+                builder: (context, state) {
+                  return ListView.separated(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) => QuestionAnswerItem(
+                            index: index,
+                            options:
+                                widget.questions[currentQuestionIndex].options,
+                            correctAnswer: widget
+                                .questions[currentQuestionIndex].correctAnswer,
+                            questionIndex: currentQuestionIndex,
+                          ),
+                      separatorBuilder: (context, index) => vGap(12),
+                      itemCount: widget
+                          .questions[currentQuestionIndex].options.length);
+                },
+              ),
+            ],
           ),
-          vGap(5),
-          Text(
-            widget.questions[currentQuestionIndex].question,
-            style: AppTextStyles.font28WhiteW700,
+        ),
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              vGap(47),
+              const Spacer(),
+              QuizBottomScreenActions(
+                onBackPressed: () {
+                  decrementQuestionIndex();
+                },
+                onNextPressed: () {
+                  incrementQuestionIndex();
+                },
+              ),
+            ],
           ),
-          vGap(40),
-          BlocBuilder<AnswerCubit, AnswerState>(
-            builder: (context, state) {
-              return ListView.separated(
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) => QuestionAnswerItem(
-                        index: index,
-                        options: widget.questions[currentQuestionIndex].options,
-                        correctAnswer: widget
-                            .questions[currentQuestionIndex].correctAnswer,
-                        questionIndex: currentQuestionIndex,
-                      ),
-                  separatorBuilder: (context, index) => vGap(12),
-                  itemCount: 4);
-            },
-          ),
-          vGap(47),
-          const Spacer(),
-          QuizBottomScreenActions(
-            onBackPressed: () {
-              decrementQuestionIndex();
-            },
-            onNextPressed: () {
-              incrementQuestionIndex();
-            },
-          ),
-        ],
-      ),
-    );
+        )
+      ],
+    ));
   }
 }

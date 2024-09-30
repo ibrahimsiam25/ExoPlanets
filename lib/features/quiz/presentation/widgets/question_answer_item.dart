@@ -39,15 +39,18 @@ class QuestionAnswerItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              options[index],
-              style: AppTextStyles.font19WhiteW600.copyWith(
-                color: context
-                            .read<AnswerCubit>()
-                            .selectedAnswers[questionIndex] ==
-                        index
-                    ? AppColors.black
-                    : AppColors.white,
+            Expanded(
+              child: Text(
+                options[index],
+                maxLines: 3,
+                style: AppTextStyles.font19WhiteW600.copyWith(
+                  color: context
+                              .read<AnswerCubit>()
+                              .selectedAnswers[questionIndex] ==
+                          index
+                      ? AppColors.black
+                      : AppColors.white,
+                ),
               ),
             ),
             Stack(
