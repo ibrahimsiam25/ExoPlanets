@@ -3,25 +3,52 @@ import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../core/widgets/custom_text_button.dart';
 import 'package:exo_planets/core/widgets/custom_app_bar.dart';
 import 'package:exo_planets/core/static/static_planet_data.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/Planet_info_card.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/custom_rich_text.dart';
-class PlanetsViewBody extends StatelessWidget {
+import 'package:exo_planets/features/planets/presentation/views/widgets/planets_page_view.dart';
+
+
+
+
+class PlanetsViewBody extends StatefulWidget {
   const PlanetsViewBody({super.key});
+
+  @override
+  State<PlanetsViewBody> createState() => _PlanetsViewBodyState();
+}
+
+class _PlanetsViewBodyState extends State<PlanetsViewBody> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+void _nextPage() {
+  if (_currentPage < planetData.length - 1) {
+    _currentPage++;
+
+   
+    _pageController.animateToPage(
+      _currentPage,
+      duration: const Duration(milliseconds: 700), 
+      curve: Curves.fastOutSlowIn, 
+    );
+
+    setState(() {});
+  }
+}
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: double.infinity, 
+      height: double.infinity,
       child: Stack(
         children: [
-       
           Positioned(
             top: 520.h,
             child: SizedBox(
-              width: MediaQuery.of(context).size.width, 
+              width: MediaQuery.of(context).size.width,
               child: Image.asset(
                 AppAssets.halfCircle,
                 fit: BoxFit.fill,
@@ -42,9 +69,9 @@ class PlanetsViewBody extends StatelessWidget {
                 vGap(10),
                 const CustomRichText(),
                 vGap(12),
-                const PlanetInfoCard(
-                  title: 'Proxima b',
-                  subtitle: 'Potentially habitable',
+               PlanetInfoCard(
+                  title:planetData[_currentPage].title,
+                  subtitle: planetData[_currentPage].subtitle,
                 ),
               ],
             ),
@@ -60,10 +87,13 @@ class PlanetsViewBody extends StatelessWidget {
             top: 180.h,
             left: 140.w,
             child: SizedBox(
-              height:620.h,
+              height: 620.h,
               width: 200.w,
               child: PlanetsPageView(
-                planetTwoClick: () {},
+                planetTwoClick: () {
+                  _nextPage();
+                },
+                pageController: _pageController,
                 angle: 60,
                 width: 150.w,
                 height: 150.h,
@@ -80,59 +110,22 @@ class PlanetsViewBody extends StatelessWidget {
               ),
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-
-
-
-class PlanetsPageView extends StatelessWidget {
-  final List<String> imagePaths;
-  final double width ;
-  final double height;
-  final int angle;
- final VoidCallback planetTwoClick;   
-  const PlanetsPageView({
-    super.key,
-    required this.imagePaths, required this.width, required this.height, required this.angle, required this.planetTwoClick, // Pass list of image asset paths
-   
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Transform.rotate(
-      angle: angle * 3.141592653589793 / 180, 
-      child: PageView.builder(
-        itemCount: imagePaths.length, 
-        itemBuilder: (context, index) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                imagePaths[index+2],
-                width: width-56,
-                height: height-56,
-              ),
-             
-              GestureDetector(
-                onTap: planetTwoClick,
-                child: Image.asset(
-                  imagePaths[index+1],
-                    width: width-33,
-                  height: height-33,
+              Positioned(
+                top: 610.h,
+                left: 50,
+                child: SizedBox(
+                  height: 50.h,
+                  width:  MediaQuery.of(context).size.width -100,
+                  child: CustomTextButton(
+                    text: "Explore planet",
+                    onTap: () {
+                     
+                    },
+                    style: AppTextStyles.font20WhiteW500
+                        ),
                 ),
-              ), 
-              Image.asset(
-                imagePaths[index],
-                width: width,
-                height: height,
               ),
-            ],
-          );
-        },
+        ],
       ),
     );
   }

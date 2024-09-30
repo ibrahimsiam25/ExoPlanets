@@ -136,4 +136,9 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.lightGreyEC ,
   );
+    static TextStyle font20WhiteW500 = LatoTextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.white, 
+  );
 }
