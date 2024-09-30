@@ -43,7 +43,7 @@ class QuizViewBody extends StatelessWidget {
           ),
           vGap(47),
           const Spacer(),
-          const QuizBottomScreenActions()
+          const QuizBottomScreenActions(),
         ],
       ),
     );

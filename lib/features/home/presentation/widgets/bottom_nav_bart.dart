@@ -19,6 +19,7 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      hasSingleChildScrollView: true,
       extendBody: true,
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(16.0.r),
