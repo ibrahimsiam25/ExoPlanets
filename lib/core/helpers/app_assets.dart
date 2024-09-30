@@ -20,6 +20,12 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
+  static const String avatarTest = 'assets/images/avatar_test.jpg';
+  static const String prefs = 'assets/images/preferences.png';
+  static const String help = 'assets/images/help.png';
+  static const String feed = 'assets/images/feedback.png';
+  static const String logout = 'assets/images/logout.png';
+  static const String pencil = 'assets/images/pencil.png';
 
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
@@ -39,4 +45,5 @@ class AppAssets {
   static const String quiz = 'assets/svgs/quiz.svg';
   static const String settings = 'assets/svgs/settings.svg';
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
+  static const String profileAvatar = 'assets/svgs/profile_avatar.svg';
 }
