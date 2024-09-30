@@ -34,20 +34,25 @@ class CustomScaffold extends StatelessWidget {
         child: Scaffold(
       appBar: appBar,
       key: scaffoldKey,
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          image: backgroundImage != null
-              ? DecorationImage(
-                  image: AssetImage(
-                    backgroundImage!,
-                  ),
-                  fit: BoxFit.cover,
-                )
-              : null,
+      body: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        child: Container(
+          height: MediaQuery.of(context).size.height +
+              MediaQuery.of(context).viewPadding.bottom +
+              MediaQuery.of(context).viewPadding.top,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            image: backgroundImage != null
+                ? DecorationImage(
+                    image: AssetImage(
+                      backgroundImage!,
+                    ),
+                    fit: BoxFit.cover,
+                  )
+                : null,
+          ),
+          child: body,
         ),
-        child: body,
       ),
       bottomNavigationBar: bottomNavigationBar,
       bottomSheet: bottomSheet,
