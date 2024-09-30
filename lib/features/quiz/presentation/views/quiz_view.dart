@@ -1,5 +1,7 @@
 import 'package:exo_planets/core/widgets/custom_scaffold.dart';
+import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../widgets/quiz_view_body.dart';
 
@@ -8,8 +10,11 @@ class QuizView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScaffold(
-      body: QuizViewBody(),
+    return CustomScaffold(
+      body: BlocProvider(
+        create: (context) => AnswerCubit(),
+        child: const QuizViewBody(),
+      ),
     );
   }
 }

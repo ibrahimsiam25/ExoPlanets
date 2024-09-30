@@ -2,10 +2,13 @@ import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
+import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_question_number_close_row.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'question_answer_item.dart';
 import 'quiz_bottom_screen_actions.dart';
 
 class QuizViewBody extends StatelessWidget {
@@ -39,15 +42,19 @@ class QuizViewBody extends StatelessWidget {
                 style: AppTextStyles.font28WhiteW700,
               ),
               vGap(40),
-              SizedBox(
-                height: 200,
-                child: ListView.separated(
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) => const SizedBox.shrink(),
-                    separatorBuilder: (context, index) => vGap(10),
-                    itemCount: 4),
+              BlocBuilder<AnswerCubit, AnswerState>(
+                builder: (context, state) {
+                  return ListView.separated(
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) => QuestionAnswerItem(
+                            index: index,
+                          ),
+                      separatorBuilder: (context, index) => vGap(12),
+                      itemCount: 4);
+                },
               ),
               vGap(47),
+              const Spacer(),
               const QuizBottomScreenActions()
             ],
           ),
