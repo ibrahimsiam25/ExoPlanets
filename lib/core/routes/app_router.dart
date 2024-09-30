@@ -5,8 +5,11 @@ import 'package:exo_planets/features/auth/presentation/views/sign_up_view.dart';
 import 'package:exo_planets/features/home/presentation/views/home_view.dart';
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:exo_planets/features/quiz/presentation/views/quiz_result_view.dart';
 import 'package:exo_planets/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
+
+import '../../features/quiz/presentation/views/quiz_view.dart';
 
 class AppRouter {
   static const String onboarding = '/onboarding';
@@ -15,6 +18,8 @@ class AppRouter {
   static const String auth = '/auth';
   static const String logIn = '/logIn';
   static const String signUp = '/signUp';
+  static const String quiz = '/quiz';
+  static const String quizResult = '/quizResult';
   static const String forgotPassword = '/forgotPassword';
   static const String bottomNavigationBar = '/bottomNavigationBar';
 
@@ -36,6 +41,10 @@ class AppRouter {
         return _viewMaterialRoute(view: const BottomNavBarController());
       case home:
         return _viewMaterialRoute(view: const HomeView());
+      case quiz:
+        return _viewMaterialRoute(view: const QuizView());
+      case quizResult:
+        return _viewMaterialRoute(view: const QuizResultView());
       default:
         return null;
     }

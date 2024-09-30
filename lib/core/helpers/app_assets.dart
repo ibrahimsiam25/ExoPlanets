@@ -20,6 +20,17 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
+  static const String proximaQuiz = 'assets/images/proximaQuiz.png';
+  static const String erisQuiz = 'assets/images/erisQuiz.png';
+  static const String cancri55Quiz = 'assets/images/Cancri55Quiz.png';
+  static const String kepler22Quiz = 'assets/images/kepler22Quiz.png';
+  static const String vestaQuiz = 'assets/images/vestaQuiz.png';
+  static const String waspQuiz = 'assets/images/WaspQuiz.png';
+  static const String earthImage = 'assets/images/earthImage.png';
+  static const String starStroke = 'assets/images/starStroke.png';
+  static const String starFill = 'assets/images/starFill.png';
+  static const String trophy = 'assets/images/trophy.png';
+  static const String rocket = 'assets/images/rocket.png';
 
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
@@ -38,5 +49,8 @@ class AppAssets {
   static const String main = 'assets/svgs/main.svg';
   static const String quiz = 'assets/svgs/quiz.svg';
   static const String settings = 'assets/svgs/settings.svg';
+  static const String arrowBack = 'assets/svgs/arrowBack.svg';
+  static const String homeIcon = 'assets/svgs/homeIcon.svg';
+
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
 }
