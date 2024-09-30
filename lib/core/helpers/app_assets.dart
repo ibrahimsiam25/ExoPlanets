@@ -50,6 +50,7 @@ class AppAssets {
   static const String quiz = 'assets/svgs/quiz.svg';
   static const String settings = 'assets/svgs/settings.svg';
   static const String arrowBack = 'assets/svgs/arrowBack.svg';
+  static const String homeIcon = 'assets/svgs/homeIcon.svg';
 
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
 }

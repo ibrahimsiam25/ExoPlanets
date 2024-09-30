@@ -15,13 +15,13 @@ class ResultContainer extends StatelessWidget {
       aspectRatio: 1,
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.only(top: 25.h),
         decoration: BoxDecoration(
           color: AppColors.darkGrey,
           borderRadius: BorderRadius.circular(20.r),
         ),
         child: Column(
           children: [
+            const Spacer(),
             Image.asset(
               AppAssets.starFill,
               width: 40.w,
@@ -58,6 +58,7 @@ class ResultContainer extends StatelessWidget {
               height: 50.h,
               width: 45.w,
             ),
+            const Spacer(),
           ],
         ),
       ),
