@@ -1,4 +1,7 @@
+import 'package:exo_planets/core/helpers/extensions.dart';
+import 'package:exo_planets/features/planets/presentation/planets%20cubit/planets_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
@@ -10,9 +13,6 @@ import 'package:exo_planets/features/planets/presentation/views/widgets/Planet_i
 import 'package:exo_planets/features/planets/presentation/views/widgets/custom_rich_text.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/planets_page_view.dart';
 
-
-
-
 class PlanetsViewBody extends StatefulWidget {
   const PlanetsViewBody({super.key});
 
@@ -22,21 +22,13 @@ class PlanetsViewBody extends StatefulWidget {
 
 class _PlanetsViewBodyState extends State<PlanetsViewBody> {
   final PageController _pageController = PageController();
-  int _currentPage = 0;
-void _nextPage() {
-  if (_currentPage < planetData.length - 1) {
-    _currentPage++;
-
-   
+  void _nextPage() {
     _pageController.animateToPage(
-      _currentPage,
-      duration: const Duration(milliseconds: 700), 
-      curve: Curves.fastOutSlowIn, 
+      context.read<PlanetsCubit>().currentIndex,
+      duration: const Duration(milliseconds: 700),
+      curve: Curves.fastOutSlowIn,
     );
-
-    setState(() {});
   }
-}
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +38,7 @@ void _nextPage() {
       child: Stack(
         children: [
           Positioned(
-            top: 520.h,
+            top: context.height * (500 / 812),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
@@ -66,37 +58,48 @@ void _nextPage() {
                   "Enjoy the amazing world beyond our solar system!",
                   style: AppTextStyles.font14GreyW400,
                 ),
-                vGap(10),
+                vGap(30),
                 const CustomRichText(),
-                vGap(12),
-               PlanetInfoCard(
-                  title:planetData[_currentPage].title,
-                  subtitle: planetData[_currentPage].subtitle,
+                vGap(30),
+                BlocBuilder<PlanetsCubit, PlanetsState>(
+                  builder: (context, state) {
+                    return PlanetInfoCard(
+                      title:
+                          planetData[context.read<PlanetsCubit>().currentIndex]
+                              .title,
+                      subtitle:
+                          planetData[context.read<PlanetsCubit>().currentIndex]
+                              .subtitle,
+                    );
+                  },
                 ),
               ],
             ),
           ),
           // Positioned arrow image
           Positioned(
-            left: 100.w,
-            top: 320.h,
+            left: context.width * 0.27,
+            top: context.height * 0.4,
             child: Image.asset(AppAssets.anArrowPointingAtAPlanet),
           ),
           // Positioned PageView with defined size
           Positioned(
-            top: 180.h,
-            left: 140.w,
+            top: context.height * 0.23,
+            left: context.width * 0.45,
             child: SizedBox(
-              height: 620.h,
-              width: 200.w,
+              height: context.height * 0.65,
+              width: context.width * 0.5,
               child: PlanetsPageView(
+                onPageChanged: (p0) {
+                  context.read<PlanetsCubit>().changePage(p0);
+                },
                 planetTwoClick: () {
                   _nextPage();
                 },
                 pageController: _pageController,
-                angle: 60,
-                width: 150.w,
-                height: 150.h,
+                angle: 50,
+                width: context.width * 0.5,
+                height: context.height * 0.18,
                 imagePaths: [
                   planetData[0].image,
                   planetData[1].image,
@@ -110,21 +113,18 @@ void _nextPage() {
               ),
             ),
           ),
-              Positioned(
-                top: 610.h,
-                left: 50,
-                child: SizedBox(
-                  height: 50.h,
-                  width:  MediaQuery.of(context).size.width -100,
-                  child: CustomTextButton(
-                    text: "Explore planet",
-                    onTap: () {
-                     
-                    },
-                    style: AppTextStyles.font20WhiteW500
-                        ),
-                ),
-              ),
+          Positioned(
+            top: 610.h,
+            left: 50,
+            child: SizedBox(
+              height: 50.h,
+              width: MediaQuery.of(context).size.width - 100,
+              child: CustomTextButton(
+                  text: "Explore planet",
+                  onTap: () {},
+                  style: AppTextStyles.font20WhiteW500),
+            ),
+          ),
         ],
       ),
     );

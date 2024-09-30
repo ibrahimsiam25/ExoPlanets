@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../planets cubit/planets_cubit.dart';
 
 class PlanetsPageView extends StatelessWidget {
   final List<String> imagePaths;
@@ -7,6 +10,7 @@ class PlanetsPageView extends StatelessWidget {
   final int angle;
   final PageController pageController;
   final VoidCallback planetTwoClick;
+  final void Function(int)? onPageChanged;
 
   const PlanetsPageView({
     super.key,
@@ -16,6 +20,7 @@ class PlanetsPageView extends StatelessWidget {
     required this.angle,
     required this.planetTwoClick,
     required this.pageController,
+    this.onPageChanged,
   });
 
   @override
@@ -23,6 +28,7 @@ class PlanetsPageView extends StatelessWidget {
     return Transform.rotate(
       angle: angle * 3.141592653589793 / 180, // Convert angle to radians
       child: PageView.builder(
+        onPageChanged: onPageChanged,
         controller: pageController,
         reverse: true,
         scrollDirection: Axis.vertical,
@@ -39,7 +45,10 @@ class PlanetsPageView extends StatelessWidget {
                 ),
               if (index + 1 < imagePaths.length) // Check if index + 1 is valid
                 GestureDetector(
-                  onTap: planetTwoClick,
+                  onTap: () {
+                    context.read<PlanetsCubit>().changePage(index + 1);
+                    planetTwoClick();
+                  },
                   child: Image.asset(
                     imagePaths[index + 1],
                     width: width - 33,
