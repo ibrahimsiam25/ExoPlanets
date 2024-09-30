@@ -38,11 +38,7 @@ class CustomTextButton extends StatelessWidget {
           ),
           alignment: Alignment.center,
           child: Center(
-            child: 
-                Text(
-                  text,
-                  style: style 
-                ),
+            child: Text(text, style: style),
           ),
         ),
       ),

@@ -11,7 +11,8 @@ class AppAssets {
   static const String oImage = 'assets/images/oImage.png';
   static const String authBackground = 'assets/images/authBackground.png';
   static const String exoPlanets = 'assets/images/exoPlanets.png';
-  static const String signInUpBackground ='assets/images/signInUpBackground.png';
+  static const String signInUpBackground =
+      'assets/images/signInUpBackground.png';
   static const String appBarLogo = 'assets/images/appBar_logo.png';
   static const String appBarProfile = 'assets/images/appBar_profile.png';
   static const String spaceBackGround = 'assets/images/home_back_ground.png';
@@ -38,26 +39,27 @@ class AppAssets {
   static const String starFill = 'assets/images/starFill.png';
   static const String trophy = 'assets/images/trophy.png';
   static const String rocket = 'assets/images/rocket.png';
-  static const String anArrowPointingAtAPlanet  = 'assets/images/An arrow pointing at a planet.png';
-  static const String halfCircle  = 'assets/images/half_circle.png';
+  static const String anArrowPointingAtAPlanet =
+      'assets/images/An arrow pointing at a planet.png';
+  static const String halfCircle = 'assets/images/half_circle.png';
 
- ////////////////////// images of planets ////////////////////////////////////////////
- static const String planet1 = 'assets/images/1.png';
- static const String planet2 = 'assets/images/2.png';
- static const String planet3 = 'assets/images/3.png';
- static const String planet4 = 'assets/images/4.png';
- static const String planet5 = 'assets/images/5.png';
- static const String planet6 = 'assets/images/6.png';
- static const String planet7 = 'assets/images/7.png';
- static const String planet8 = 'assets/images/8.png';
+  ////////////////////// images of planets ////////////////////////////////////////////
+  static const String planet1 = 'assets/images/1.png';
+  static const String planet2 = 'assets/images/2.png';
+  static const String planet3 = 'assets/images/3.png';
+  static const String planet4 = 'assets/images/4.png';
+  static const String planet5 = 'assets/images/5.png';
+  static const String planet6 = 'assets/images/6.png';
+  static const String planet7 = 'assets/images/7.png';
+  static const String planet8 = 'assets/images/8.png';
 
-
- ////////////////////// 3d models of planets ////////////////////////////////////////////
+  ////////////////////// 3d models of planets ////////////////////////////////////////////
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
   static const String planetGliese5813DModel = "assets/3d/gliese_581_g.glb";
   static const String planetWASP12bDModel = "assets/3d/WASP-12b_1_249888.glb";
-  static const String planet55CancrieDModel ="assets/3d/55_Cancri_e_1_24364.glb";
+  static const String planet55CancrieDModel =
+      "assets/3d/55_Cancri_e_1_24364.glb";
   static const String planetKEPLER22BDModel = "assets/3d/kepler_22b.glb";
   static const String planetErisModel = "assets/3d/Eris_1_2326.glb";
   static const String planetVestaModel = "assets/3d/vesta.glb";

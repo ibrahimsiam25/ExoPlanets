@@ -8,7 +8,6 @@ import 'package:exo_planets/features/planets/presentation/views/planets_view.dar
 import 'package:exo_planets/features/quiz/presentation/views/select_quiz_view.dart';
 import 'package:exo_planets/features/settings/presentation/views/settings_view.dart';
 
-
 class Constants {
   const Constants._();
 

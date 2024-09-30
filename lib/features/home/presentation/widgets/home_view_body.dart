@@ -8,7 +8,6 @@ import 'package:exo_planets/core/static/static_planet_data.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_plenet_view.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_navigation_row.dart';
 
-
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 

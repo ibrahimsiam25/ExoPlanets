@@ -1,4 +1,3 @@
-import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/stroked_circle.dart';
@@ -10,13 +9,21 @@ import '../../../../core/theme/app_text_styles.dart';
 
 class QuestionAnswerItem extends StatelessWidget {
   final int index;
-  const QuestionAnswerItem({super.key, required this.index});
+  final int questionIndex;
+  final List<String> options;
+  final String correctAnswer;
+  const QuestionAnswerItem(
+      {super.key,
+      required this.index,
+      required this.options,
+      required this.correctAnswer,
+      required this.questionIndex});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.read<AnswerCubit>().selectAnswer(index);
+        context.read<AnswerCubit>().selectAnswer(index, questionIndex);
       },
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -25,30 +32,38 @@ class QuestionAnswerItem extends StatelessWidget {
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.r),
-            color: context.read<AnswerCubit>().selectedAnswer == index
+            color: context.read<AnswerCubit>().selectedAnswers[questionIndex] ==
+                    index
                 ? AppColors.selectedAnswerGrey
                 : AppColors.answergrey),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Mars",
+              options[index],
               style: AppTextStyles.font19WhiteW600.copyWith(
-                color: context.read<AnswerCubit>().selectedAnswer == index
+                color: context
+                            .read<AnswerCubit>()
+                            .selectedAnswers[questionIndex] ==
+                        index
                     ? AppColors.black
                     : AppColors.white,
               ),
             ),
-            hGap(160),
             Stack(
               alignment: Alignment.center,
               children: [
                 StrokedCircle(
                     radius: 10.r,
                     strokeWidth: 2,
-                    color: context.read<AnswerCubit>().selectedAnswer == index
+                    color: context
+                                .read<AnswerCubit>()
+                                .selectedAnswers[questionIndex] ==
+                            index
                         ? AppColors.black
                         : AppColors.white),
-                context.read<AnswerCubit>().selectedAnswer == index
+                context.read<AnswerCubit>().selectedAnswers[questionIndex] ==
+                        index
                     ? CircleAvatar(
                         backgroundColor: AppColors.black, radius: 6.5.r)
                     : StrokedCircle(

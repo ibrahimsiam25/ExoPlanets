@@ -4,11 +4,17 @@ import 'package:meta/meta.dart';
 part 'answer_state.dart';
 
 class AnswerCubit extends Cubit<AnswerState> {
-  AnswerCubit() : super(AnswerInitial());
-  int? selectedAnswer;
-
-  void selectAnswer(int answer) {
-    selectedAnswer = answer;
+  AnswerCubit(int numberOfQuestions)
+      : selectedAnswers = List<int?>.filled(numberOfQuestions, null),
+        super(AnswerInitial());
+  List<int?> selectedAnswers;
+  void selectAnswer(int answer, int questionIndex) {
+    if (questionIndex >= selectedAnswers.length) {
+      selectedAnswers.add(answer);
+    } else {
+      selectedAnswers[questionIndex] = answer;
+    }
+    print(selectedAnswers);
     emit(AnswerSelected());
   }
 }

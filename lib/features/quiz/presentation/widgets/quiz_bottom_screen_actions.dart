@@ -1,5 +1,4 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
-import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_bottom_screen_button.dart';
@@ -7,10 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/routes/app_router.dart';
-
 class QuizBottomScreenActions extends StatelessWidget {
-  const QuizBottomScreenActions({super.key});
+  final VoidCallback onBackPressed;
+  final VoidCallback onNextPressed;
+  const QuizBottomScreenActions(
+      {super.key, required this.onBackPressed, required this.onNextPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class QuizBottomScreenActions extends StatelessWidget {
           child: Opacity(
             opacity: 0.5,
             child: QuizBottomScreenButton(
-              onTap: () {},
+              onTap: onBackPressed,
               index: 1,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -43,11 +43,7 @@ class QuizBottomScreenActions extends StatelessWidget {
         hGap(20),
         Expanded(
           child: QuizBottomScreenButton(
-            onTap: () {
-              context.pushNamed(
-                AppRouter.quizResult,
-              );
-            },
+            onTap: onNextPressed,
             index: 1,
           ),
         ),
