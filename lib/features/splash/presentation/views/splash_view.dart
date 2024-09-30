@@ -1,4 +1,5 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/widgets/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +11,9 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     precacheImage(const AssetImage(AppAssets.authBackground), context);
-    return const CustomScaffold(
-      body: SplashViewBody(),
+    return CustomScaffold(
+      height: context.height,
+      body: const SplashViewBody(),
       backgroundImage: AppAssets.splashBg,
     );
   }

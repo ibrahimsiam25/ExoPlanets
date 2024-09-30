@@ -41,7 +41,8 @@ class BottomScreenActions extends StatelessWidget {
                 onTap: () async {
                   await context.read<LoginAnoCubit>().loginAno();
                   if (context.mounted) {
-                    context.pushNamedAndRemoveUntil(AppRouter.home,
+                    context.pushNamedAndRemoveUntil(
+                        AppRouter.bottomNavigationBar,
                         predicate: (_) => false);
                   }
                 },
