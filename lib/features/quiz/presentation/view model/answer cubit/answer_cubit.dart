@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -8,6 +10,7 @@ class AnswerCubit extends Cubit<AnswerState> {
       : selectedAnswers = List<int?>.filled(numberOfQuestions, null),
         super(AnswerInitial());
   List<int?> selectedAnswers;
+  int score = 0;
   void selectAnswer(int answer, int questionIndex) {
     if (questionIndex >= selectedAnswers.length) {
       selectedAnswers.add(answer);
@@ -16,5 +19,11 @@ class AnswerCubit extends Cubit<AnswerState> {
     }
     print(selectedAnswers);
     emit(AnswerSelected());
+  }
+
+  @override
+  void onChange(Change<AnswerState> change) {
+    log(change.toString());
+    super.onChange(change);
   }
 }

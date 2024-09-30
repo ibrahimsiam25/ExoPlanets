@@ -17,7 +17,7 @@ class QuizView extends StatelessWidget {
     return CustomScaffold(
       height: context.height,
       body: BlocProvider(
-        create: (context) => AnswerCubit(questions.length - 7),
+        create: (context) => AnswerCubit(questions.length),
         child: QuizViewBody(questions: questions),
       ),
     );

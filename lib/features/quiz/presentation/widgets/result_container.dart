@@ -7,7 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class ResultContainer extends StatelessWidget {
-  const ResultContainer({super.key});
+  final int score;
+  const ResultContainer({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,7 @@ class ResultContainer extends StatelessWidget {
               width: 60.w,
             ),
             vGap(20),
-            Text("6/8 Points", style: AppTextStyles.font22WhiteW600),
+            Text("$score/8 Points", style: AppTextStyles.font22WhiteW600),
             vGap(10),
             Image.asset(
               AppAssets.rocket,

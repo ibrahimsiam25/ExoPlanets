@@ -46,7 +46,9 @@ class AppRouter {
         var args = settings.arguments as List<Question>;
         return _viewMaterialRoute(view: const QuizView(), arguments: args);
       case quizResult:
-        return _viewMaterialRoute(view: const QuizResultView());
+        var args = settings.arguments as int;
+        return _viewMaterialRoute(
+            view: const QuizResultView(), arguments: args);
       default:
         return null;
     }

@@ -1,3 +1,4 @@
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
@@ -24,9 +25,17 @@ class _QuizViewBodyState extends State<QuizViewBody> {
       setState(() {
         currentQuestionIndex++;
       });
-    }
-    if (currentQuestionIndex == widget.questions.length - 1) {
-      Navigator.pushNamed(context, AppRouter.quizResult);
+    } else {
+      for (int i = 0; i < widget.questions.length; i++) {
+        if (context.read<AnswerCubit>().selectedAnswers[i] != null &&
+            widget.questions[i]
+                    .options[context.read<AnswerCubit>().selectedAnswers[i]!] ==
+                widget.questions[i].correctAnswer) {
+          context.read<AnswerCubit>().score++;
+        }
+      }
+      context.pushReplacementNamed(AppRouter.quizResult,
+          arguments: context.read<AnswerCubit>().score);
     }
   }
 
