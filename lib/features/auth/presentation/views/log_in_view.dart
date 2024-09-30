@@ -1,5 +1,6 @@
 import 'package:exo_planets/core/DI/dependency_injection.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/widgets/custom_scaffold.dart';
 import 'package:exo_planets/features/auth/presentation/view%20models/login%20ano%20cubit/login_ano_cubit.dart';
 import 'package:exo_planets/features/auth/presentation/view%20models/login%20cubit/login_cubit.dart';
@@ -13,6 +14,7 @@ class LogInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      height: context.height,
       body: MultiBlocProvider(
         providers: [
           BlocProvider(

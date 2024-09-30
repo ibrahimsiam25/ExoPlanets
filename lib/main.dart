@@ -16,10 +16,10 @@ void main() async {
   // make navigation bar transparent
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.light,
-      statusBarColor: Colors.transparent,
-    ),
+        systemNavigationBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarColor: Colors.transparent,
+        systemStatusBarContrastEnforced: true),
   );
   // make flutter draw behind navigation bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);

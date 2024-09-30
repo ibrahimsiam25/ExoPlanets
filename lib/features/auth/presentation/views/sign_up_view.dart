@@ -1,4 +1,5 @@
 import 'package:exo_planets/core/DI/dependency_injection.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/widgets/custom_scaffold.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/sign_up_view_body.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      height: context.height,
       body: MultiBlocProvider(
         providers: [
           BlocProvider(
