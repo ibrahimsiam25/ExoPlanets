@@ -24,7 +24,7 @@ class ResultContainer extends StatelessWidget {
           children: [
             const Spacer(),
             Image.asset(
-              AppAssets.starFill,
+              score >= 4 ? AppAssets.starFill : AppAssets.starStroke,
               width: 40.w,
               height: 40.h,
             ),
@@ -39,7 +39,7 @@ class ResultContainer extends StatelessWidget {
                     height: 40.h,
                   ),
                   Image.asset(
-                    AppAssets.starStroke,
+                    score == 8 ? AppAssets.starFill : AppAssets.starStroke,
                     width: 40.w,
                     height: 40.h,
                   ),
