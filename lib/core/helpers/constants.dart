@@ -111,6 +111,8 @@ class Constants {
   ];
   static const List<String> quizImages = [
     AppAssets.proximaQuiz,
+    AppAssets.kepler452bQuiz,
+    AppAssets.gliese581gQuiz,
     AppAssets.waspQuiz,
     AppAssets.cancri55Quiz,
     AppAssets.kepler22Quiz,

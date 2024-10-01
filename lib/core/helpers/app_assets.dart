@@ -34,6 +34,8 @@ class AppAssets {
   static const String kepler22Quiz = 'assets/images/kepler22Quiz.png';
   static const String vestaQuiz = 'assets/images/vestaQuiz.png';
   static const String waspQuiz = 'assets/images/WaspQuiz.png';
+  static const String gliese581gQuiz = 'assets/images/gliese581gQuiz.png';
+  static const String kepler452bQuiz = 'assets/images/kepler452bQuiz.png';
   static const String earthImage = 'assets/images/earthImage.png';
   static const String starStroke = 'assets/images/starStroke.png';
   static const String starFill = 'assets/images/starFill.png';
