@@ -24,11 +24,12 @@ class _ExplorePlanetViewBodyState extends State<ExplorePlanetViewBody> {
       mute: false,
     ),
   );
-@override
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -92,6 +93,4 @@ class _ExplorePlanetViewBodyState extends State<ExplorePlanetViewBody> {
       ),
     );
   }
-
-  
 }
