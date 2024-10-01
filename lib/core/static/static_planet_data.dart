@@ -40,7 +40,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet2,
       imageForYoutube: AppAssets.youtube2,
       imageForExplore: AppAssets.exoPlanet2,
-      youtubeLink:"https://www.youtube.com/watch?v=3WXvlZS6Dx4&pp=ygUaRXhwbGFpbiBHbGllc2UtNTgxZyBwbGFuZXQ%3D" ,
+      youtubeLink:"https://www.youtube.com/watch?v=ViL4Wepe5xY&t=33s&pp=ygUbRXhwbGFpbiBLZXBsZS00NTJiIGYgcGxhbmV0" ,
       exploreInfoList:  [
     ExploreInfoModel(
       title: "Nickname",
@@ -82,7 +82,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet3,
       imageForYoutube: AppAssets.youtube3,
       imageForExplore: AppAssets.exoPlanet3,
-      youtubeLink:"https://www.youtube.com/watch?v=ViL4Wepe5xY&t=33s&pp=ygUbRXhwbGFpbiBLZXBsZS00NTJiIGYgcGxhbmV0" ,
+      youtubeLink:"https://www.youtube.com/watch?v=3WXvlZS6Dx4&pp=ygUaRXhwbGFpbiBHbGllc2UtNTgxZyBwbGFuZXQ%3D" ,
       exploreInfoList:  [
   ExploreInfoModel(
     title: 'Location',

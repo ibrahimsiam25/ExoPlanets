@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import '../../../../../../core/model/planet_model.dart';
-import '../../../../../../core/helpers/url_luncher.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
+import '../../../../../../core/helpers/get_vedio_id_from_url.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/explore_planet/explore_item.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/explore_planet/custom_explore_app_bar.dart';
 
-
-class ExplorePlanetViewBody extends StatelessWidget {
+class ExplorePlanetViewBody extends StatefulWidget {
   const ExplorePlanetViewBody({super.key, required this.planetModel});
   final PlanetModel planetModel;
+  @override
+  State<ExplorePlanetViewBody> createState() => _ExplorePlanetViewBodyState();
+}
+
+class _ExplorePlanetViewBodyState extends State<ExplorePlanetViewBody> {
+  bool _isVideoPlaying = false;
+
+  late final YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: getVideoIdFromUrl(widget.planetModel.youtubeLink),
+    flags: const YoutubePlayerFlags(
+      autoPlay: true,
+      mute: false,
+    ),
+  );
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +39,7 @@ class ExplorePlanetViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                planetModel.imageForExplore,
+                widget.planetModel.imageForExplore,
                 width: double.infinity,
                 fit: BoxFit.fill,
               ),
@@ -37,34 +56,39 @@ class ExplorePlanetViewBody extends StatelessWidget {
                     vGap(5),
                     GestureDetector(
                       onTap: () {
-                               launchCustomUr(context,
-                                   planetModel.youtubeLink);
+                        setState(() {
+                          _isVideoPlaying = !_isVideoPlaying;
+                        });
                       },
-                      child: Image.asset(
-                        width: double.infinity,
-                        fit: BoxFit.fill,
-                        planetModel.imageForYoutube,
-                      ),
+                      child: _isVideoPlaying
+                          ? YoutubePlayer(
+                              controller: _controller,
+                              showVideoProgressIndicator: true,
+                            )
+                          : Image.asset(
+                              widget.planetModel.imageForYoutube,
+                              width: double.infinity,
+                              fit: BoxFit.fill,
+                            ),
                     ),
                     vGap(16),
                     // Remove SizedBox and directly use ListView.builder
                     ListView.builder(
                       shrinkWrap: true, // Enable shrink wrapping
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: planetModel.exploreInfoList.length,
+                      itemCount: widget.planetModel.exploreInfoList.length,
                       itemBuilder: (context, index) {
-                        return ExploreItem(planetModel.exploreInfoList[index]);
+                        return ExploreItem(
+                            widget.planetModel.exploreInfoList[index]);
                       },
                     ),
-  
-   
                     vGap(48),
                   ],
                 ),
               ),
             ],
           ),
-          CustomExploreAppBar(planetModel: planetModel),
+          CustomExploreAppBar(planetModel: widget.planetModel),
         ],
       ),
     );
