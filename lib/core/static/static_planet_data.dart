@@ -40,23 +40,39 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet2,
       imageForYoutube: AppAssets.youtube2,
       imageForExplore: AppAssets.exoPlanet2,
-      youtubeLink:"" ,
+      youtubeLink:"https://www.youtube.com/watch?v=3WXvlZS6Dx4&pp=ygUaRXhwbGFpbiBHbGllc2UtNTgxZyBwbGFuZXQ%3D" ,
       exploreInfoList:  [
     ExploreInfoModel(
-      title: "Introduction",
-      description: "Kepler-452b is a super-Earth exoplanet orbiting a star similar to our Sun, located about 1,400 light-years away.",
+      title: "Nickname",
+      description: "Kepler-452b is often referred to as Earth's older cousin due to its similarities to Earth and its older star.",
     ),
     ExploreInfoModel(
-      title: "Orbit and Size",
-      description: "It has an orbital period of 385 days and is 60% larger in diameter than Earth.",
+      title: "Distance from Earth",
+      description: "Kepler-452b is located about 1,400 light-years away from Earth.",
     ),
     ExploreInfoModel(
-      title: "Habitable Zone",
-      description: "It lies in the habitable zone of its star, where liquid water could exist on its surface.",
+      title: "Star Type",
+      description: "Kepler-452b orbits a yellow G-type star, similar to our Sun."
     ),
     ExploreInfoModel(
-      title: "Star Similarity",
-      description: "Kepler-452b orbits a star that is about 1.5 billion years older than the Sun, raising questions about the future of planets in similar systems.",
+      title: "Orbital Period",
+      description: "A year on Kepler-452b lasts 385 Earth days, slightly longer than a year on Earth."
+    ),
+        ExploreInfoModel(
+      title: "Habitability",
+      description: "Kepler-452b is in its star's habitable zone, where liquid water could potentially exist."
+    ),
+        ExploreInfoModel(
+      title: "Size Comparison",
+      description: "Kepler-452b is about 60% larger than Earth, making it a super-Earth."
+    ),
+        ExploreInfoModel(
+      title: "Star Age",
+      description: "The star Kepler-452 is approximately 6 billion years old, older than our Sun."
+    ),
+        ExploreInfoModel(
+      title: "Challenges to Habitability",
+      description: "Kepler-452b may have experienced a runaway greenhouse effect, making its surface too hot to support life."
     ),
   ]),
   PlanetModel(
@@ -66,25 +82,37 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet3,
       imageForYoutube: AppAssets.youtube3,
       imageForExplore: AppAssets.exoPlanet3,
-      youtubeLink:"" ,
-      exploreInfoList: [
-    ExploreInfoModel(
-      title: "Introduction",
-      description: "Gliese 581g is an exoplanet orbiting the red dwarf star Gliese 581, located about 20.4 light-years away in the constellation Libra.",
-    ),
-    ExploreInfoModel(
-      title: "Orbit and Mass",
-      description: "It has a mass of 3 to 4 times that of Earth and orbits its star in about 37 days.",
-    ),
-    ExploreInfoModel(
-      title: "Habitability",
-      description: "Gliese 581g is in the star's habitable zone, where conditions might allow for liquid water and potentially life.",
-    ),
-    ExploreInfoModel(
-      title: "Tidally Locked",
-      description: "The planet is likely tidally locked, meaning one side always faces its star while the other side remains in darkness, leading to extreme temperature differences.",
-    ),
-  ]),
+      youtubeLink:"https://www.youtube.com/watch?v=ViL4Wepe5xY&t=33s&pp=ygUbRXhwbGFpbiBLZXBsZS00NTJiIGYgcGxhbmV0" ,
+      exploreInfoList:  [
+  ExploreInfoModel(
+    title: 'Location',
+    description: 'Gliese 581g is located in the Gliese 581 star system, which is around 20 light-years away from Earth.',
+  ),
+  ExploreInfoModel(
+    title: 'Type of Planet',
+    description: 'It is believed to be a rocky, Earth-like planet, making it a candidate for supporting life.',
+  ),
+  ExploreInfoModel(
+    title: 'Star Type',
+    description: 'Gliese 581g orbits a red dwarf star, which is cooler and smaller than the Sun.',
+  ),
+  ExploreInfoModel(
+    title: 'Habitability',
+    description: 'Gliese 581g orbits within the habitable zone of its star, where temperatures could allow liquid water to exist.',
+  ),
+  ExploreInfoModel(
+    title: 'Orbital Period',
+    description: 'It takes 13 Earth days to complete one orbit around its star.',
+  ),
+  ExploreInfoModel(
+    title: 'Climate',
+    description: 'Gliese 581g is likely tidally locked, meaning one side of the planet always faces its star, creating extreme differences between its day and night sides.',
+  ),
+  ExploreInfoModel(
+    title: 'Controversy',
+    description: 'The existence of Gliese 581g is controversial as some astronomers have debated whether it actually exists based on conflicting data from observations.',
+  ),
+]),
   PlanetModel(
       title: "Wasp-12b",
       subtitle: "Tidal distortion",

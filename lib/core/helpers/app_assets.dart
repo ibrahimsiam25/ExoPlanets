@@ -55,8 +55,8 @@ class AppAssets {
 
 ////////////////////// images of explore ////////////////////////////////////////////
 static const String exoPlanet1 = 'assets/images/ex1.png';
-static const String exoPlanet2 = 'assets/images/ex1.png';
-static const String exoPlanet3 = 'assets/images/ex1.png';
+static const String exoPlanet2 = 'assets/images/ex2.png';
+static const String exoPlanet3 = 'assets/images/ex3.png';
 static const String exoPlanet4 = 'assets/images/ex4.png';
 static const String exoPlanet5 = 'assets/images/ex5.png';
 static const String exoPlanet6 = 'assets/images/ex6.png';
@@ -65,8 +65,8 @@ static const String exoPlanet8 = 'assets/images/ex8.png';
 
 ////////////////////// images of yotube ////////////////////////////////////////////
 static const String youtube1 = 'assets/images/youtube1.png';
-static const String youtube2 = 'assets/images/youtube1.png';
-static const String youtube3 = 'assets/images/youtube1.png';
+static const String youtube2 = 'assets/images/youtube2.png';
+static const String youtube3 = 'assets/images/youtube3.png';
 static const String youtube4 = 'assets/images/youtube4.png';
 static const String youtube5 = 'assets/images/youtube5.png';
 static const String youtube6 = 'assets/images/youtube6.png';

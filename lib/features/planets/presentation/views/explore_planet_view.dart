@@ -20,7 +20,7 @@ class ExplorePlanetView extends StatelessWidget {
         planetModel: planetModel,
       ),
       bottomNavigationBar: Container(
-        margin: EdgeInsets.only(left: 18.0,right: 18.0,bottom: 18.0),
+        margin:const EdgeInsets.only(left: 18.0,right: 18.0,bottom: 18.0),
         height: 70.h,
         child: CustomButton(
             text: "View in VR",

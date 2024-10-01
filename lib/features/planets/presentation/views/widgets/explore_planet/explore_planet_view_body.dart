@@ -1,15 +1,11 @@
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
-import '../../../../../../core/helpers/app_assets.dart';
 import '../../../../../../core/model/planet_model.dart';
-import 'package:exo_planets/core/routes/app_router.dart';
 import '../../../../../../core/helpers/url_luncher.dart';
-import 'package:exo_planets/core/helpers/extensions.dart';
-import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/explore_planet/explore_item.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/explore_planet/custom_explore_app_bar.dart';
+
 
 class ExplorePlanetViewBody extends StatelessWidget {
   const ExplorePlanetViewBody({super.key, required this.planetModel});
