@@ -26,6 +26,14 @@ class Constants {
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
       stops: [0, 1]);
+  static const LinearGradient customGreenGradient = LinearGradient(
+      colors: [
+        AppColors.lighterGreen,
+        AppColors.darkerGreen,
+      ],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      stops: [0, 1]);
   static List<OnBoardingItem> onBoardingItems = [
     OnBoardingItem(
         description:

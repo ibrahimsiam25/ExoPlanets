@@ -1,6 +1,7 @@
 import 'package:exo_planets/core/helpers/constants.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
-import 'package:exo_planets/features/quiz/data/models/question.dart';
+import 'package:exo_planets/features/quiz/data/models/questions/question.dart';
+import 'package:exo_planets/features/quiz/data/models/quiz%20navigation/quiz_navigation.dart';
 import 'package:exo_planets/features/quiz/data/static/planets_questions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,8 @@ class PlanetQuizItem extends StatelessWidget {
     return InkWell(
         onTap: () {
           List<Question> questions = getQuestions(index);
-          context.pushNamed(AppRouter.quiz, arguments: questions);
+          context.pushNamed(AppRouter.quiz,
+              arguments: QuizNavigation(questions: questions));
         },
         child: Image.asset(
           Constants.quizImages[index],

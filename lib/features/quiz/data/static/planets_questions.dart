@@ -1,6 +1,6 @@
-import 'package:exo_planets/features/quiz/data/models/questions.dart';
+import 'package:exo_planets/features/quiz/data/models/questions/questions.dart';
 
-import '../models/question.dart';
+import '../models/questions/question.dart';
 
 Map<String, dynamic> proximaBQuestions = {
   "questions": [
