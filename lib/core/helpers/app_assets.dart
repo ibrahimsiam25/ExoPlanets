@@ -94,4 +94,5 @@ static const String youtube8 = 'assets/images/youtube8.png';
 
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
   static const String profileAvatar = 'assets/svgs/profile_avatar.svg';
+  static const String viewInVR = 'assets/svgs/akar-icons_vr-ar.svg';
 }

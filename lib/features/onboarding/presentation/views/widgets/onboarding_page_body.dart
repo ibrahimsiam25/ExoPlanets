@@ -1,15 +1,17 @@
+import 'onboarding_skip_button.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../../core/routes/app_router.dart';
+import '../../../../../core/helpers/app_assets.dart';
+import 'package:exo_planets/core/helpers/spacing.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import 'package:exo_planets/core/helpers/constants.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
-import 'package:exo_planets/core/helpers/spacing.dart';
-import 'package:exo_planets/core/theme/app_text_styles.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../core/helpers/app_assets.dart';
+import 'package:exo_planets/core/theme/app_text_styles.dart';
 import '../../../../../core/helpers/shared_pref_helper.dart';
-import '../../../../../core/routes/app_router.dart';
-import '../../../../../core/widgets/custom_button.dart';
-import 'onboarding_skip_button.dart';
+
+
 
 class OnBoardingPageBody extends StatelessWidget {
   final int index;
@@ -35,6 +37,11 @@ class OnBoardingPageBody extends StatelessWidget {
           vGap(113.h),
           index == 3
               ? CustomButton(
+                icon:    SvgPicture.asset(
+                    AppAssets.arrowForward,
+                    width: 22.w,
+                    height: 14.h,
+                  ),
                   text: "Get Started",
                   onTap: () {
                     context.pushNamedAndRemoveUntil(AppRouter.auth,

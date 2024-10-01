@@ -1,16 +1,18 @@
-import 'package:exo_planets/core/DI/dependency_injection.dart';
+import 'bottom_screen_actions.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../core/helpers/app_assets.dart';
+import '../../../../../core/helpers/show_toast.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
+import '../../../../../core/theme/app_text_styles.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:exo_planets/core/widgets/custom_button.dart';
+import 'package:exo_planets/core/DI/dependency_injection.dart';
+import '../../view models/send password reset cubit/send_password_reset_cubit.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/auth_header.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/custom_auth_text_form_field.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/helpers/show_toast.dart';
-import '../../../../../core/theme/app_text_styles.dart';
-import '../../view models/send password reset cubit/send_password_reset_cubit.dart';
-import 'bottom_screen_actions.dart';
 
 class ForgotPasswordViewBody extends StatefulWidget {
   const ForgotPasswordViewBody({super.key});
@@ -56,6 +58,11 @@ class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
                     controller: emailController),
                 vGap(20),
                 CustomButton(
+                      icon:    SvgPicture.asset(
+                    AppAssets.arrowForward,
+                    width: 22.w,
+                    height: 14.h,
+                  ),
                     text: "Send",
                     onTap: () {
                       if (formKey.currentState!.validate()) {

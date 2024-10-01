@@ -10,6 +10,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet1,
       imageForYoutube: AppAssets.youtube1,
       imageForExplore: AppAssets.exoPlanet1,
+      youtubeLink:"https://www.youtube.com/watch?v=ZDVuNu7zaBc" ,
       exploreInfoList: [
         ExploreInfoModel(
           title: "Introduction",
@@ -39,6 +40,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet2,
       imageForYoutube: AppAssets.youtube2,
       imageForExplore: AppAssets.exoPlanet2,
+      youtubeLink:"" ,
       exploreInfoList: []),
   PlanetModel(
       title: "Gliese 581g",
@@ -47,6 +49,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet3,
       imageForYoutube: AppAssets.youtube3,
       imageForExplore: AppAssets.exoPlanet3,
+      youtubeLink:"" ,
       exploreInfoList: []),
   PlanetModel(
       title: "Wasp-12b",
@@ -55,6 +58,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet4,
       imageForYoutube: AppAssets.youtube4,
       imageForExplore: AppAssets.exoPlanet4,
+      youtubeLink:"https://www.youtube.com/watch?v=3Frf-uHYNVg" ,
       exploreInfoList: [
         ExploreInfoModel(
           title: "Type",
@@ -77,6 +81,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet5,
       imageForYoutube: AppAssets.youtube5,
       imageForExplore: AppAssets.exoPlanet5,
+      youtubeLink:"https://www.youtube.com/watch?v=fbqCaiakhOI&pp=ygUbNTUgQ2FuY3JpIGVcIHBsYW5ldCBleHBsYWlu" ,
       exploreInfoList: [
         ExploreInfoModel(
           title: "Type",
@@ -99,6 +104,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet6,
       imageForYoutube: AppAssets.youtube6,
       imageForExplore: AppAssets.exoPlanet6,
+      youtubeLink:"https://www.youtube.com/watch?v=x8qK-K3XuIM&pp=ygUZS0VQTEVSLTIyQiBwbGFuZXQgZXhwbGFpbg%3D%3D" ,
       exploreInfoList: [
         ExploreInfoModel(
             title: "Location",
@@ -120,6 +126,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet7,
       imageForYoutube: AppAssets.youtube7,
       imageForExplore: AppAssets.exoPlanet7,
+      youtubeLink:"https://www.youtube.com/watch?v=c2WOf4Ws4AA&pp=ygUTRXJpcyBwbGFuZXQgZXhwbGFpbg%3D%3D" ,
       exploreInfoList: [
         ExploreInfoModel(
             title: "Discovery",
@@ -141,6 +148,7 @@ List<PlanetModel> planetData = [
       imageView: AppAssets.planet8,
       imageForYoutube: AppAssets.youtube8,
       imageForExplore: AppAssets.exoPlanet8,
+      youtubeLink: "https://www.youtube.com/watch?v=24RfWMymkJo&pp=ygUUVmVzdGEgcGxhbmV0IGV4cGxhaW4%3D",
       exploreInfoList: [
         ExploreInfoModel(title: "Surface", description: "Vesta's surface has large craters and unique geological features."),
         ExploreInfoModel(title: "Structure", description: "Unlike most asteroids, Vesta has a core, mantle, and crust like Earth."),
