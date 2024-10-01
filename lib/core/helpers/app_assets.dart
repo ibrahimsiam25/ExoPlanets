@@ -19,7 +19,7 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
-
+  static const String vrBackGround = 'assets/images/vr_backGround.png';
   static const String avatarTest = 'assets/images/avatar_test.jpg';
   static const String prefs = 'assets/images/preferences.png';
   static const String help = 'assets/images/help.png';
@@ -41,6 +41,8 @@ class AppAssets {
   static const String anArrowPointingAtAPlanet  = 'assets/images/An arrow pointing at a planet.png';
   static const String halfCircle  = 'assets/images/half_circle.png';
   static const String backIcon  = 'assets/images/Back.png';
+  static const String smallIcon  = 'assets/images/small.png';
+  static const String bigIcon  = 'assets/images/big.png';
   
  ////////////////////// images of planets ////////////////////////////////////////////
  static const String planet1 = 'assets/images/1.png';

@@ -65,7 +65,9 @@ class ExplorePlanetViewBody extends StatelessWidget {
                     CustomButton(
                         text: "View in VR",
                         onTap: () {
-                          context.pushNamed(AppRouter.viewInVrView,);
+                          context.pushNamed(AppRouter.viewInVrView,
+                          arguments: planetModel.model3DPath
+                          );
                         },
                         icon: SvgPicture.asset(AppAssets.viewInVR)),
                     vGap(48),

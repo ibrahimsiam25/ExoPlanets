@@ -14,7 +14,6 @@ import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.d
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 
-
 class AppRouter {
   static const String onboarding = '/onboarding';
   static const String splash = '/';
@@ -28,7 +27,7 @@ class AppRouter {
   static const String forgotPassword = '/forgotPassword';
   static const String bottomNavigationBar = '/bottomNavigationBar';
   static const String viewInVrView = '/viewInVrView';
- 
+
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splash:
@@ -53,10 +52,13 @@ class AppRouter {
       case quizResult:
         return _viewMaterialRoute(view: const QuizResultView());
       case viewInVrView:
-        return _viewMaterialRoute(view: const ViewInVrView());  
+        final planet3dModelPath = settings.arguments as String;
+        return _viewMaterialRoute(
+            view: ViewInVrView(planet3dModelPath: planet3dModelPath));
       case explorePlanetView:
-       final planetModel = settings.arguments as PlanetModel;
-        return _viewMaterialRoute(view:  ExplorePlanetView(planetModel: planetModel));  
+        final planetModel = settings.arguments as PlanetModel;
+        return _viewMaterialRoute(
+            view: ExplorePlanetView(planetModel: planetModel));
       default:
         return null;
     }

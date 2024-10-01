@@ -22,7 +22,9 @@ class CustomVRAppBar extends StatelessWidget {
             ),
             title: Text(
      "VR",
-     style: AppTextStyles.font27LightGreyW600,
+     style: AppTextStyles.font27LightGreyW600.copyWith(
+      fontSize: 30
+     ),
             ),
           
           ),

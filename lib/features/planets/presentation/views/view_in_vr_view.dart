@@ -4,13 +4,13 @@ import 'package:exo_planets/core/theme/app_colors.dart';
 
 
 class ViewInVrView extends StatelessWidget {
-  const ViewInVrView({super.key});
-
+  const ViewInVrView({super.key, required this.planet3dModelPath});
+final String planet3dModelPath;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.greyofBackgroundForExplaroe,
-      body: ViewInVrViewBody(),
+      body: ViewInVrViewBody(planet3dModelPath: planet3dModelPath),
     );
   }
 }
