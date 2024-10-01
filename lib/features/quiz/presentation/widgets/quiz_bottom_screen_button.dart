@@ -10,9 +10,14 @@ import '../../../../core/helpers/constants.dart';
 class QuizBottomScreenButton extends StatelessWidget {
   final VoidCallback onTap;
   final int index;
+  final double? verticalPadding;
   final Widget? child;
   const QuizBottomScreenButton(
-      {super.key, required this.onTap, required this.index, this.child});
+      {super.key,
+      required this.onTap,
+      required this.index,
+      this.child,
+      this.verticalPadding});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,7 @@ class QuizBottomScreenButton extends StatelessWidget {
       child: Container(
         width: double.infinity,
         alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(vertical: 24.h),
+        padding: EdgeInsets.symmetric(vertical: verticalPadding ?? 24.h),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.r),
           gradient: Constants.customRedGradient,
