@@ -41,7 +41,24 @@ List<PlanetModel> planetData = [
       imageForYoutube: AppAssets.youtube2,
       imageForExplore: AppAssets.exoPlanet2,
       youtubeLink:"" ,
-      exploreInfoList: []),
+      exploreInfoList:  [
+    ExploreInfoModel(
+      title: "Introduction",
+      description: "Kepler-452b is a super-Earth exoplanet orbiting a star similar to our Sun, located about 1,400 light-years away.",
+    ),
+    ExploreInfoModel(
+      title: "Orbit and Size",
+      description: "It has an orbital period of 385 days and is 60% larger in diameter than Earth.",
+    ),
+    ExploreInfoModel(
+      title: "Habitable Zone",
+      description: "It lies in the habitable zone of its star, where liquid water could exist on its surface.",
+    ),
+    ExploreInfoModel(
+      title: "Star Similarity",
+      description: "Kepler-452b orbits a star that is about 1.5 billion years older than the Sun, raising questions about the future of planets in similar systems.",
+    ),
+  ]),
   PlanetModel(
       title: "Gliese 581g",
       subtitle: "Second earth",
@@ -50,7 +67,24 @@ List<PlanetModel> planetData = [
       imageForYoutube: AppAssets.youtube3,
       imageForExplore: AppAssets.exoPlanet3,
       youtubeLink:"" ,
-      exploreInfoList: []),
+      exploreInfoList: [
+    ExploreInfoModel(
+      title: "Introduction",
+      description: "Gliese 581g is an exoplanet orbiting the red dwarf star Gliese 581, located about 20.4 light-years away in the constellation Libra.",
+    ),
+    ExploreInfoModel(
+      title: "Orbit and Mass",
+      description: "It has a mass of 3 to 4 times that of Earth and orbits its star in about 37 days.",
+    ),
+    ExploreInfoModel(
+      title: "Habitability",
+      description: "Gliese 581g is in the star's habitable zone, where conditions might allow for liquid water and potentially life.",
+    ),
+    ExploreInfoModel(
+      title: "Tidally Locked",
+      description: "The planet is likely tidally locked, meaning one side always faces its star while the other side remains in darkness, leading to extreme temperature differences.",
+    ),
+  ]),
   PlanetModel(
       title: "Wasp-12b",
       subtitle: "Tidal distortion",

@@ -1,6 +1,5 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import '../../../../../../core/helpers/app_assets.dart';
 import '../../../../../../core/model/planet_model.dart';

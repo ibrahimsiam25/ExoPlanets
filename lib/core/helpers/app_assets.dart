@@ -19,7 +19,6 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
-  static const String vrBackGround = 'assets/images/vr_backGround.png';
   static const String avatarTest = 'assets/images/avatar_test.jpg';
   static const String prefs = 'assets/images/preferences.png';
   static const String help = 'assets/images/help.png';
