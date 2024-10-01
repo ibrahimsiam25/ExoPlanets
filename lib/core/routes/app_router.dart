@@ -12,20 +12,8 @@ import 'package:exo_planets/features/quiz/presentation/views/quiz_result_view.da
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
-import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
-import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
-import 'package:exo_planets/features/auth/presentation/views/log_in_view.dart';
-import 'package:exo_planets/features/auth/presentation/views/sign_up_view.dart';
-import 'package:exo_planets/features/home/presentation/views/home_view.dart';
-import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
-import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:exo_planets/features/quiz/data/models/quiz%20navigation/quiz_navigation.dart';
 import 'package:exo_planets/features/quiz/data/models/result%20navigation%20/result_navigation.dart';
-import 'package:exo_planets/features/quiz/presentation/views/quiz_result_view.dart';
-import 'package:exo_planets/features/splash/presentation/views/splash_view.dart';
-import 'package:flutter/material.dart';
-
-import '../../features/quiz/presentation/views/quiz_view.dart';
 
 class AppRouter {
   static const String onboarding = '/onboarding';
@@ -64,8 +52,8 @@ class AppRouter {
         return _viewMaterialRoute(view: const QuizView(), arguments: args);
       case quizResult:
         var args = settings.arguments as ResultNavigation;
-
-        return _viewMaterialRoute(view: const QuizResultView());
+        return _viewMaterialRoute(
+            view: const QuizResultView(), arguments: args);
       case viewInVrView:
         final planet3dModelPath = settings.arguments as String;
 
