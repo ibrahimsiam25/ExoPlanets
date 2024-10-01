@@ -70,6 +70,7 @@ class AppAssets {
   static const String planets = 'assets/svgs/planets.svg';
   static const String main = 'assets/svgs/main.svg';
   static const String quiz = 'assets/svgs/quiz.svg';
+  static const String crown = 'assets/svgs/crown.svg';
   static const String settings = 'assets/svgs/settings.svg';
   static const String arrowBack = 'assets/svgs/arrowBack.svg';
   static const String homeIcon = 'assets/svgs/homeIcon.svg';

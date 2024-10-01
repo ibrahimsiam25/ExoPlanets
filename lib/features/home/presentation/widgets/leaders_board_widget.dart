@@ -7,15 +7,14 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/inner_shadow.dart';
 
 class LeadersBoardWidget extends StatelessWidget {
-  const LeadersBoardWidget({super.key});
+  final VoidCallback onTap;
+  const LeadersBoardWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      child: InkWell(
-        onTap: () {
-          // routing to main here...
-        },
+      child: GestureDetector(
+        onTap: onTap,
         child: InnerShadow(
           shadows: [
             BoxShadow(

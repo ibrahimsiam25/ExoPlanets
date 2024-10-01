@@ -1,3 +1,4 @@
+import 'package:exo_planets/features/leadersboard/presentation/views/leadersboard_view.dart';
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
@@ -85,6 +86,7 @@ class Constants {
     PlanetsView(),
     SelectQuizView(),
     SettingsView(),
+    LeadersboardView()
   ];
 
   static const List<String> images = [

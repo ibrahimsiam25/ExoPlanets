@@ -67,7 +67,14 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
                 start: 0,
                 end: 0,
                 bottom: 32.0.h,
-                child: const LeadersBoardWidget(),
+                child: LeadersBoardWidget(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = 4;
+                      index = 4;
+                    });
+                  },
+                ),
               )
             ],
           ),
