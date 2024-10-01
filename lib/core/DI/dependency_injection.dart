@@ -4,6 +4,7 @@ import 'package:exo_planets/features/auth/presentation/view%20models/login%20ano
 import 'package:exo_planets/features/auth/presentation/view%20models/login%20cubit/login_cubit.dart';
 import 'package:exo_planets/features/auth/presentation/view%20models/send%20password%20reset%20cubit/send_password_reset_cubit.dart';
 import 'package:exo_planets/features/auth/presentation/view%20models/signup%20cubit/signup_cubit.dart';
+import 'package:exo_planets/features/leadersboard/presentation/view%20models/leadersboard%20cubit/leadersboard_cubit.dart';
 import 'package:exo_planets/features/quiz/data/repo/update_points_repo.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/update%20points%20cubit/update_points_cubit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -31,4 +32,5 @@ setupServiceLocator() {
 
   getIt.registerFactory<UpdatePointsCubit>(
       () => UpdatePointsCubit(getIt.get<UpdatePointsRepo>()));
+  getIt.registerFactory<LeadersboardCubit>(() => LeadersboardCubit());
 }

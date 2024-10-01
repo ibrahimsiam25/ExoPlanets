@@ -5,10 +5,13 @@ import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/model/user_model.dart';
 import '../../../../core/theme/app_colors.dart';
 
 class NotTop3Player extends StatelessWidget {
-  const NotTop3Player({super.key});
+  final UserModel user;
+  final int index;
+  const NotTop3Player({super.key, required this.user, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class NotTop3Player extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              "4",
+              "${index + 4}",
               style: AppTextStyles.font15WhiteW500,
             ),
             hGap(16),
@@ -36,14 +39,15 @@ class NotTop3Player extends StatelessWidget {
             SizedBox(
                 width: context.width * 0.3,
                 child: Text(
-                  "User Name",
+                  user.name,
                   overflow: TextOverflow.ellipsis,
                   style: AppTextStyles.font15WhiteW500,
                 )),
             const Spacer(
               flex: 3,
             ),
-            const Text("36 pts"),
+            Text("${user.points.toString()} pts",
+                style: AppTextStyles.font15WhiteW500),
             const Spacer()
           ],
         ));
