@@ -1,5 +1,7 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
+import 'package:exo_planets/core/routes/app_router.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_bottom_screen_button.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_views_background.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/result_container.dart';
@@ -31,7 +33,9 @@ class QuizResultViewBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.w),
           child: QuizBottomScreenButton(
-            onTap: () {},
+            onTap: () {
+              context.pushReplacementNamed(AppRouter.bottomNavigationBar);
+            },
             index: 0,
             child: Row(
               mainAxisSize: MainAxisSize.min,

@@ -25,7 +25,7 @@ class CustomLoginButtonBlocConsumer extends StatelessWidget {
         if (state is LoginSuccess) {
           showToast(
               toastMsg: "Logged in Successfully", state: ToastStates.success);
-          context.pushNamedAndRemoveUntil(AppRouter.home,
+          context.pushNamedAndRemoveUntil(AppRouter.bottomNavigationBar,
               predicate: (_) => false);
         } else if (state is LoginFailure) {
           showToast(toastMsg: state.message, state: ToastStates.error);

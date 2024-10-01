@@ -1,6 +1,8 @@
+import 'package:exo_planets/core/DI/dependency_injection.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/widgets/custom_scaffold.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
+import 'package:exo_planets/features/quiz/presentation/view%20model/update%20points%20cubit/update_points_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,8 +18,15 @@ class QuizView extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as List<Question>;
     return CustomScaffold(
       height: context.height,
-      body: BlocProvider(
-        create: (context) => AnswerCubit(questions.length),
+      body: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => AnswerCubit(questions.length),
+          ),
+          BlocProvider(
+            create: (context) => getIt.get<UpdatePointsCubit>(),
+          ),
+        ],
         child: QuizViewBody(questions: questions),
       ),
     );
