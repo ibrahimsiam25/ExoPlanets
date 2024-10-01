@@ -1,8 +1,12 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import '../../../../../../core/helpers/app_assets.dart';
 import '../../../../../../core/model/planet_model.dart';
+import 'package:exo_planets/core/routes/app_router.dart';
+import '../../../../../../core/helpers/url_luncher.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/planets/presentation/views/widgets/explore_planet/explore_item.dart';
@@ -37,7 +41,10 @@ class ExplorePlanetViewBody extends StatelessWidget {
                     ),
                     vGap(5),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                               launchCustomUr(context,
+                                   planetModel.youtubeLink);
+                      },
                       child: Image.asset(
                         width: double.infinity,
                         fit: BoxFit.fill,
@@ -57,7 +64,9 @@ class ExplorePlanetViewBody extends StatelessWidget {
                     vGap(52),
                     CustomButton(
                         text: "View in VR",
-                        onTap: () {},
+                        onTap: () {
+                          context.pushNamed(AppRouter.viewInVrView,);
+                        },
                         icon: SvgPicture.asset(AppAssets.viewInVR)),
                     vGap(48),
                   ],

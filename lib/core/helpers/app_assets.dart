@@ -11,8 +11,7 @@ class AppAssets {
   static const String oImage = 'assets/images/oImage.png';
   static const String authBackground = 'assets/images/authBackground.png';
   static const String exoPlanets = 'assets/images/exoPlanets.png';
-  static const String signInUpBackground =
-      'assets/images/signInUpBackground.png';
+  static const String signInUpBackground ='assets/images/signInUpBackground.png';
   static const String appBarLogo = 'assets/images/appBar_logo.png';
   static const String appBarProfile = 'assets/images/appBar_profile.png';
   static const String spaceBackGround = 'assets/images/home_back_ground.png';
@@ -62,6 +61,7 @@ static const String exoPlanet5 = 'assets/images/ex5.png';
 static const String exoPlanet6 = 'assets/images/ex6.png';
 static const String exoPlanet7 = 'assets/images/ex7.png';
 static const String exoPlanet8 = 'assets/images/ex8.png';
+
 ////////////////////// images of yotube ////////////////////////////////////////////
 static const String youtube1 = 'assets/images/youtube1.png';
 static const String youtube2 = 'assets/images/youtube1.png';
@@ -71,13 +71,13 @@ static const String youtube5 = 'assets/images/youtube5.png';
 static const String youtube6 = 'assets/images/youtube6.png';
 static const String youtube7 = 'assets/images/youtube7.png';
 static const String youtube8 = 'assets/images/youtube8.png';
+
  ////////////////////// 3d models of planets ////////////////////////////////////////////
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
   static const String planetGliese5813DModel = "assets/3d/gliese_581_g.glb";
   static const String planetWASP12bDModel = "assets/3d/WASP-12b_1_249888.glb";
-  static const String planet55CancrieDModel =
-      "assets/3d/55_Cancri_e_1_24364.glb";
+  static const String planet55CancrieDModel ="assets/3d/55_Cancri_e_1_24364.glb";
   static const String planetKEPLER22BDModel = "assets/3d/kepler_22b.glb";
   static const String planetErisModel = "assets/3d/Eris_1_2326.glb";
   static const String planetVestaModel = "assets/3d/vesta.glb";
@@ -91,7 +91,6 @@ static const String youtube8 = 'assets/images/youtube8.png';
   static const String settings = 'assets/svgs/settings.svg';
   static const String arrowBack = 'assets/svgs/arrowBack.svg';
   static const String homeIcon = 'assets/svgs/homeIcon.svg';
-
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
   static const String profileAvatar = 'assets/svgs/profile_avatar.svg';
   static const String viewInVR = 'assets/svgs/akar-icons_vr-ar.svg';

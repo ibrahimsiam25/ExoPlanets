@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:exo_planets/core/model/planet_model.dart';
 import '../../features/quiz/presentation/views/quiz_view.dart';
 import 'package:exo_planets/features/quiz/data/models/question.dart';
+import '../../features/planets/presentation/views/view_in_vr_view.dart';
 import '../../features/planets/presentation/views/explore_planet_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
 import 'package:exo_planets/features/home/presentation/views/home_view.dart';
@@ -26,6 +27,7 @@ class AppRouter {
   static const String explorePlanetView = '/explorePlanetView';
   static const String forgotPassword = '/forgotPassword';
   static const String bottomNavigationBar = '/bottomNavigationBar';
+  static const String viewInVrView = '/viewInVrView';
  
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -50,6 +52,8 @@ class AppRouter {
         return _viewMaterialRoute(view: const QuizView(), arguments: args);
       case quizResult:
         return _viewMaterialRoute(view: const QuizResultView());
+      case viewInVrView:
+        return _viewMaterialRoute(view: const ViewInVrView());  
       case explorePlanetView:
        final planetModel = settings.arguments as PlanetModel;
         return _viewMaterialRoute(view:  ExplorePlanetView(planetModel: planetModel));  
