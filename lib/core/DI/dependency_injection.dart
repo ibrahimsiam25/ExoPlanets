@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:exo_planets/core/core%20cubits/cubit/get_user_data_cubit.dart';
 import 'package:exo_planets/features/auth/data/repo/auth_repo.dart';
 import 'package:exo_planets/features/auth/presentation/view%20models/login%20ano%20cubit/login_ano_cubit.dart';
 import 'package:exo_planets/features/auth/presentation/view%20models/login%20cubit/login_cubit.dart';
@@ -29,6 +30,8 @@ setupServiceLocator() {
       () => SendPasswordResetCubit(getIt.get<AuthRepo>()));
   getIt.registerFactory<LoginAnoCubit>(
       () => LoginAnoCubit(getIt.get<AuthRepo>()));
+  getIt.registerFactory<UserDataCubit>(
+      () => UserDataCubit(getIt.get<AuthRepo>()));
 
   getIt.registerFactory<UpdatePointsCubit>(
       () => UpdatePointsCubit(getIt.get<UpdatePointsRepo>()));

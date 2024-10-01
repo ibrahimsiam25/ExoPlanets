@@ -3,7 +3,7 @@ import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:flutter/material.dart';
 
 ImageProvider networkImageHelper(String? url) {
-  if (url != null) {
+  if (url != null && url.isNotEmpty) {
     return CachedNetworkImageProvider(url);
   } else {
     return const AssetImage(AppAssets.avatarTest);

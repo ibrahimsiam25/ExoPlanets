@@ -43,7 +43,9 @@ class LeadersboardViewBody extends StatelessWidget {
                         ),
                         vGap(16),
                         CustomResetOfTopPlayersList(
-                          restOfTopPlayers: snapshot.data!.sublist(3),
+                          restOfTopPlayers: snapshot.data!.length <= 8
+                              ? snapshot.data!.sublist(3)
+                              : snapshot.data!.sublist(3, 8),
                         )
                       ],
                     );

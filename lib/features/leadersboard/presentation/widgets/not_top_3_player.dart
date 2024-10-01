@@ -1,10 +1,10 @@
-import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/helpers/network_image_helper.dart';
 import '../../../../core/model/user_model.dart';
 import '../../../../core/theme/app_colors.dart';
 
@@ -33,7 +33,7 @@ class NotTop3Player extends StatelessWidget {
             hGap(16),
             CircleAvatar(
               radius: 21.r,
-              backgroundImage: const AssetImage(AppAssets.avatarTest),
+              backgroundImage: networkImageHelper(user.imageUrl),
             ),
             hGap(16),
             SizedBox(

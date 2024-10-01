@@ -66,7 +66,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       vGap(40),
                       const BottomScreenActions(
                         backExists: true,
-                        skipExists: true,
+                        skipExists: false,
                       ),
                       vGap(20)
                     ],

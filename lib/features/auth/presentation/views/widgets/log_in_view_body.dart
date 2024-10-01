@@ -55,7 +55,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                       vGap(40),
                       const BottomScreenActions(
                         backExists: true,
-                        skipExists: true,
+                        skipExists: false,
                       ),
                       vGap(20)
                     ],
