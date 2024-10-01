@@ -11,8 +11,7 @@ class AppAssets {
   static const String oImage = 'assets/images/oImage.png';
   static const String authBackground = 'assets/images/authBackground.png';
   static const String exoPlanets = 'assets/images/exoPlanets.png';
-  static const String signInUpBackground =
-      'assets/images/signInUpBackground.png';
+  static const String signInUpBackground ='assets/images/signInUpBackground.png';
   static const String appBarLogo = 'assets/images/appBar_logo.png';
   static const String appBarProfile = 'assets/images/appBar_profile.png';
   static const String spaceBackGround = 'assets/images/home_back_ground.png';
@@ -20,7 +19,6 @@ class AppAssets {
   static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
   static const String circleOfPlent = 'assets/images/circleOfPlent.png';
-
   static const String avatarTest = 'assets/images/avatar_test.jpg';
   static const String prefs = 'assets/images/preferences.png';
   static const String help = 'assets/images/help.png';
@@ -41,27 +39,48 @@ class AppAssets {
   static const String starFill = 'assets/images/starFill.png';
   static const String trophy = 'assets/images/trophy.png';
   static const String rocket = 'assets/images/rocket.png';
-  static const String anArrowPointingAtAPlanet =
-      'assets/images/An arrow pointing at a planet.png';
-  static const String halfCircle = 'assets/images/half_circle.png';
+  static const String anArrowPointingAtAPlanet  = 'assets/images/An arrow pointing at a planet.png';
+  static const String halfCircle  = 'assets/images/half_circle.png';
+  static const String backIcon  = 'assets/images/Back.png';
+  static const String smallIcon  = 'assets/images/small.png';
+  static const String bigIcon  = 'assets/images/big.png';
+  
+ ////////////////////// images of planets ////////////////////////////////////////////
+ static const String planet1 = 'assets/images/1.png';
+ static const String planet2 = 'assets/images/2.png';
+ static const String planet3 = 'assets/images/3.png';
+ static const String planet4 = 'assets/images/4.png';
+ static const String planet5 = 'assets/images/5.png';
+ static const String planet6 = 'assets/images/6.png';
+ static const String planet7 = 'assets/images/7.png';
+ static const String planet8 = 'assets/images/8.png';
 
-  ////////////////////// images of planets ////////////////////////////////////////////
-  static const String planet1 = 'assets/images/1.png';
-  static const String planet2 = 'assets/images/2.png';
-  static const String planet3 = 'assets/images/3.png';
-  static const String planet4 = 'assets/images/4.png';
-  static const String planet5 = 'assets/images/5.png';
-  static const String planet6 = 'assets/images/6.png';
-  static const String planet7 = 'assets/images/7.png';
-  static const String planet8 = 'assets/images/8.png';
+////////////////////// images of explore ////////////////////////////////////////////
+static const String exoPlanet1 = 'assets/images/ex1.png';
+static const String exoPlanet2 = 'assets/images/ex2.png';
+static const String exoPlanet3 = 'assets/images/ex3.png';
+static const String exoPlanet4 = 'assets/images/ex4.png';
+static const String exoPlanet5 = 'assets/images/ex5.png';
+static const String exoPlanet6 = 'assets/images/ex6.png';
+static const String exoPlanet7 = 'assets/images/ex7.png';
+static const String exoPlanet8 = 'assets/images/ex8.png';
 
-  ////////////////////// 3d models of planets ////////////////////////////////////////////
+////////////////////// images of yotube ////////////////////////////////////////////
+static const String youtube1 = 'assets/images/youtube1.png';
+static const String youtube2 = 'assets/images/youtube2.png';
+static const String youtube3 = 'assets/images/youtube3.png';
+static const String youtube4 = 'assets/images/youtube4.png';
+static const String youtube5 = 'assets/images/youtube5.png';
+static const String youtube6 = 'assets/images/youtube6.png';
+static const String youtube7 = 'assets/images/youtube7.png';
+static const String youtube8 = 'assets/images/youtube8.png';
+
+ ////////////////////// 3d models of planets ////////////////////////////////////////////
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
   static const String planetGliese5813DModel = "assets/3d/gliese_581_g.glb";
   static const String planetWASP12bDModel = "assets/3d/WASP-12b_1_249888.glb";
-  static const String planet55CancrieDModel =
-      "assets/3d/55_Cancri_e_1_24364.glb";
+  static const String planet55CancrieDModel ="assets/3d/55_Cancri_e_1_24364.glb";
   static const String planetKEPLER22BDModel = "assets/3d/kepler_22b.glb";
   static const String planetErisModel = "assets/3d/Eris_1_2326.glb";
   static const String planetVestaModel = "assets/3d/vesta.glb";
@@ -76,7 +95,7 @@ class AppAssets {
   static const String settings = 'assets/svgs/settings.svg';
   static const String arrowBack = 'assets/svgs/arrowBack.svg';
   static const String homeIcon = 'assets/svgs/homeIcon.svg';
-
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
   static const String profileAvatar = 'assets/svgs/profile_avatar.svg';
+  static const String viewInVR = 'assets/svgs/akar-icons_vr-ar.svg';
 }

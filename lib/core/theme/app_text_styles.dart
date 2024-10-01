@@ -160,4 +160,15 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.white,
   );
+    static TextStyle font32RedW600 = LatoTextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.lightRed, 
+  );
+      static TextStyle font16RedW500 = LatoTextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.lightRed, 
+  );
 }
+

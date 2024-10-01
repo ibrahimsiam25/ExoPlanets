@@ -1,12 +1,15 @@
 import 'auth_view_texts.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/helpers/app_assets.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import 'package:exo_planets/core/routes/app_router.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/custom_hollow_button.dart';
+
 
 class AuthViewBody extends StatelessWidget {
   const AuthViewBody({super.key});
@@ -30,6 +33,11 @@ class AuthViewBody extends StatelessWidget {
             ),
             vGap(24),
             CustomButton(
+              icon:    SvgPicture.asset(
+                    AppAssets.arrowForward,
+                    width: 22.w,
+                    height: 14.h,
+                  ),
                 text: "Sign Up",
                 onTap: () {
                   context.pushNamed(AppRouter.signUp);

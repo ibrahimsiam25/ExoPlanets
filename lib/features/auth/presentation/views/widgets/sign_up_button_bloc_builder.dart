@@ -1,13 +1,15 @@
-import 'package:exo_planets/core/helpers/extensions.dart';
-import 'package:exo_planets/core/helpers/show_toast.dart';
-import 'package:exo_planets/core/routes/app_router.dart';
-import 'package:exo_planets/core/widgets/custom_button.dart';
-import 'package:exo_planets/features/auth/presentation/view%20models/signup%20cubit/signup_cubit.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../core/theme/app_colors.dart';
+import '../../../../../core/helpers/app_assets.dart';
+import 'package:exo_planets/core/routes/app_router.dart';
+import 'package:exo_planets/core/helpers/extensions.dart';
+import 'package:exo_planets/core/helpers/show_toast.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:exo_planets/core/widgets/custom_button.dart';
+import 'package:exo_planets/features/auth/presentation/view%20models/signup%20cubit/signup_cubit.dart';
+
 
 class SignUpButtonBlocConsumer extends StatelessWidget {
   final GlobalKey<FormState> formKey;
@@ -38,6 +40,11 @@ class SignUpButtonBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         if (state is SignupLoading) {
           return CustomButton(
+                icon:    SvgPicture.asset(
+                    AppAssets.arrowForward,
+                    width: 22.w,
+                    height: 14.h,
+                  ),
             onTap: () {},
             text: "Sign Up",
             child: Center(
@@ -52,6 +59,11 @@ class SignUpButtonBlocConsumer extends StatelessWidget {
           );
         }
         return CustomButton(
+              icon:    SvgPicture.asset(
+                    AppAssets.arrowForward,
+                    width: 22.w,
+                    height: 14.h,
+                  ),
           onTap: () {
             if (formKey.currentState!.validate()) {
               context.read<SignupCubit>().signup(

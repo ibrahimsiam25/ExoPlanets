@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../manager/planets cubit/planets_cubit.dart';
+import '../../../manager/planets cubit/planets_cubit.dart';
 
 
 class PlanetsPageView extends StatelessWidget {
