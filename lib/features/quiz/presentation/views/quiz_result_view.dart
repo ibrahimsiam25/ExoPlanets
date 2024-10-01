@@ -8,8 +8,9 @@ class QuizResultView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScaffold(
-      body: QuizResultViewBody(),
+    var args = ModalRoute.of(context)!.settings.arguments as int;
+    return CustomScaffold(
+      body: QuizResultViewBody(score: args),
     );
   }
 }

@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/model/planet_model.dart';
 import '../../features/quiz/presentation/views/quiz_view.dart';
+import 'package:exo_planets/features/quiz/data/models/question.dart';
 import '../../features/planets/presentation/views/explore_planet_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
+import 'package:exo_planets/features/home/presentation/views/home_view.dart';
 import 'package:exo_planets/features/home/presentation/views/home_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/log_in_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/sign_up_view.dart';
 import 'package:exo_planets/features/splash/presentation/views/splash_view.dart';
 import 'package:exo_planets/features/quiz/presentation/views/quiz_result_view.dart';
+import 'package:exo_planets/features/quiz/presentation/views/quiz_result_view.dart';
+import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
+import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 
 
@@ -45,7 +50,8 @@ class AppRouter {
       case home:
         return _viewMaterialRoute(view: const HomeView());
       case quiz:
-        return _viewMaterialRoute(view: const QuizView());
+        var args = settings.arguments as List<Question>;
+        return _viewMaterialRoute(view: const QuizView(), arguments: args);
       case quizResult:
         return _viewMaterialRoute(view: const QuizResultView());
       case explorePlanetView:

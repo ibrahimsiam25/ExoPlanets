@@ -11,7 +11,8 @@ class AppAssets {
   static const String oImage = 'assets/images/oImage.png';
   static const String authBackground = 'assets/images/authBackground.png';
   static const String exoPlanets = 'assets/images/exoPlanets.png';
-  static const String signInUpBackground ='assets/images/signInUpBackground.png';
+  static const String signInUpBackground =
+      'assets/images/signInUpBackground.png';
   static const String appBarLogo = 'assets/images/appBar_logo.png';
   static const String appBarProfile = 'assets/images/appBar_profile.png';
   static const String spaceBackGround = 'assets/images/home_back_ground.png';
@@ -75,7 +76,8 @@ static const String youtube8 = 'assets/images/youtube8.png';
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
   static const String planetGliese5813DModel = "assets/3d/gliese_581_g.glb";
   static const String planetWASP12bDModel = "assets/3d/WASP-12b_1_249888.glb";
-  static const String planet55CancrieDModel ="assets/3d/55_Cancri_e_1_24364.glb";
+  static const String planet55CancrieDModel =
+      "assets/3d/55_Cancri_e_1_24364.glb";
   static const String planetKEPLER22BDModel = "assets/3d/kepler_22b.glb";
   static const String planetErisModel = "assets/3d/Eris_1_2326.glb";
   static const String planetVestaModel = "assets/3d/vesta.glb";

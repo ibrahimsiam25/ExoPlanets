@@ -6,7 +6,6 @@ import 'package:exo_planets/core/helpers/constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 
-
 class SelectQuizViewBody extends StatelessWidget {
   const SelectQuizViewBody({super.key});
 

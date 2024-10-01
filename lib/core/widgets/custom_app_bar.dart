@@ -3,7 +3,6 @@ import '../theme/app_colors.dart';
 import '../helpers/app_assets.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
@@ -20,14 +19,14 @@ class CustomAppBar extends StatelessWidget {
         ),
         child: Row(
           children: [
-           const Spacer(
+            const Spacer(
               flex: 3,
             ),
             Image.asset(
               AppAssets.appBarLogo,
             ),
             hGap(20),
-          const  Spacer(
+            const Spacer(
               flex: 1,
             ),
             ClipOval(

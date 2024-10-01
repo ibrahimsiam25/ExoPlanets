@@ -4,7 +4,6 @@ import 'package:exo_planets/core/theme/app_theme.dart';
 import 'package:exo_planets/core/routes/app_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class ExoPlanetsApp extends StatelessWidget {
   const ExoPlanetsApp({super.key});
 

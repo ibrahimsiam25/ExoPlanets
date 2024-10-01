@@ -4,6 +4,7 @@ import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cub
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/models/question.dart';
 import '../widgets/quiz_view_body.dart';
 
 class QuizView extends StatelessWidget {
@@ -11,11 +12,13 @@ class QuizView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var questions =
+        ModalRoute.of(context)!.settings.arguments as List<Question>;
     return CustomScaffold(
       height: context.height,
       body: BlocProvider(
-        create: (context) => AnswerCubit(),
-        child: const QuizViewBody(),
+        create: (context) => AnswerCubit(questions.length),
+        child: QuizViewBody(questions: questions),
       ),
     );
   }

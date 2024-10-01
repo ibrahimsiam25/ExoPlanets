@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:exo_planets/core/static/static_planet_data.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
 
-
 class CustomPlanetView extends StatelessWidget {
   final PageController pageController;
 

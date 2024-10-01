@@ -10,7 +10,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class QuizResultViewBody extends StatelessWidget {
-  const QuizResultViewBody({super.key});
+  final int score;
+  const QuizResultViewBody({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,12 @@ class QuizResultViewBody extends StatelessWidget {
         vGap(90),
         Align(
             alignment: Alignment.center,
-            child: Text("Victory", style: AppTextStyles.font40RedW600)),
+            child: Text(score >= 4 ? "Victory" : "Defeat",
+                style: AppTextStyles.font40RedW600)),
         vGap(90),
-        const ResultContainer(),
+        ResultContainer(
+          score: score,
+        ),
         vGap(50),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.w),

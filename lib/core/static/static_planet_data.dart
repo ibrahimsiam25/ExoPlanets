@@ -142,17 +142,8 @@ List<PlanetModel> planetData = [
       imageForYoutube: AppAssets.youtube8,
       imageForExplore: AppAssets.exoPlanet8,
       exploreInfoList: [
-        ExploreInfoModel(
-            title: "Surface",
-            description:
-                "Vesta's surface has large craters and unique geological features."),
-        ExploreInfoModel(
-            title: "Structure",
-            description:
-                "Unlike most asteroids, Vesta has a core, mantle, and crust like Earth."),
-        ExploreInfoModel(
-            title: "Dawn Mission",
-            description:
-                "NASA's Dawn spacecraft revealed that Vesta's structure and water-related features provide insights into planetary formation."),
+        ExploreInfoModel(title: "Surface", description: "Vesta's surface has large craters and unique geological features."),
+        ExploreInfoModel(title: "Structure", description: "Unlike most asteroids, Vesta has a core, mantle, and crust like Earth."),
+        ExploreInfoModel(title: "Dawn Mission", description: "NASA's Dawn spacecraft revealed that Vesta's structure and water-related features provide insights into planetary formation."),
       ]),
 ];
