@@ -1,3 +1,4 @@
+import 'package:exo_planets/core/helpers/constants.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/stroked_circle.dart';
@@ -11,19 +12,25 @@ class QuestionAnswerItem extends StatelessWidget {
   final int index;
   final int questionIndex;
   final List<String> options;
+  final bool isReviewing;
   final String correctAnswer;
+  final List<int?>? selectedAnswers;
   const QuestionAnswerItem(
       {super.key,
       required this.index,
       required this.options,
       required this.correctAnswer,
-      required this.questionIndex});
+      required this.questionIndex,
+      required this.isReviewing,
+      this.selectedAnswers});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.read<AnswerCubit>().selectAnswer(index, questionIndex);
+        isReviewing
+            ? null
+            : context.read<AnswerCubit>().selectAnswer(index, questionIndex);
       },
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -32,10 +39,27 @@ class QuestionAnswerItem extends StatelessWidget {
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.r),
-            color: context.read<AnswerCubit>().selectedAnswers[questionIndex] ==
-                    index
-                ? AppColors.selectedAnswerGrey
-                : AppColors.answergrey),
+            gradient: isReviewing
+                ? (options[selectedAnswers![questionIndex]!] ==
+                            options[index] &&
+                        options[selectedAnswers![questionIndex]!] ==
+                            correctAnswer)
+                    ? Constants.customGreenGradient
+                    : (options[selectedAnswers![questionIndex]!] !=
+                                correctAnswer &&
+                            options[selectedAnswers![questionIndex]!] ==
+                                options[index])
+                        ? Constants.customRedGradient
+                        : options[index] == correctAnswer
+                            ? Constants.customGreenGradient
+                            : null
+                : null,
+            color: isReviewing
+                ? AppColors.answergrey
+                : context.read<AnswerCubit>().selectedAnswers[questionIndex] ==
+                        index
+                    ? AppColors.selectedAnswerGrey
+                    : AppColors.answergrey),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

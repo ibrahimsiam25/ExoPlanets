@@ -31,7 +31,7 @@ class SignUpButtonBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is SignupSuccess) {
           showToast(toastMsg: "Sign Up Successful", state: ToastStates.success);
-          context.pushNamedAndRemoveUntil(AppRouter.home,
+          context.pushNamedAndRemoveUntil(AppRouter.bottomNavigationBar,
               predicate: (_) => false);
         } else if (state is SignupFailure) {
           showToast(toastMsg: state.error, state: ToastStates.error);

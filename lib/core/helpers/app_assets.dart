@@ -32,6 +32,8 @@ class AppAssets {
   static const String kepler22Quiz = 'assets/images/kepler22Quiz.png';
   static const String vestaQuiz = 'assets/images/vestaQuiz.png';
   static const String waspQuiz = 'assets/images/WaspQuiz.png';
+  static const String gliese581gQuiz = 'assets/images/gliese581gQuiz.png';
+  static const String kepler452bQuiz = 'assets/images/kepler452bQuiz.png';
   static const String earthImage = 'assets/images/earthImage.png';
   static const String starStroke = 'assets/images/starStroke.png';
   static const String starFill = 'assets/images/starFill.png';
@@ -89,6 +91,7 @@ static const String youtube8 = 'assets/images/youtube8.png';
   static const String planets = 'assets/svgs/planets.svg';
   static const String main = 'assets/svgs/main.svg';
   static const String quiz = 'assets/svgs/quiz.svg';
+  static const String crown = 'assets/svgs/crown.svg';
   static const String settings = 'assets/svgs/settings.svg';
   static const String arrowBack = 'assets/svgs/arrowBack.svg';
   static const String homeIcon = 'assets/svgs/homeIcon.svg';

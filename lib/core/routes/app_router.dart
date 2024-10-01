@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/model/planet_model.dart';
 import '../../features/quiz/presentation/views/quiz_view.dart';
-import 'package:exo_planets/features/quiz/data/models/question.dart';
 import '../../features/planets/presentation/views/view_in_vr_view.dart';
 import '../../features/planets/presentation/views/explore_planet_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
@@ -13,6 +12,8 @@ import 'package:exo_planets/features/quiz/presentation/views/quiz_result_view.da
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:exo_planets/features/quiz/data/models/quiz%20navigation/quiz_navigation.dart';
+import 'package:exo_planets/features/quiz/data/models/result%20navigation%20/result_navigation.dart';
 
 class AppRouter {
   static const String onboarding = '/onboarding';
@@ -47,12 +48,15 @@ class AppRouter {
       case home:
         return _viewMaterialRoute(view: const HomeView());
       case quiz:
-        var args = settings.arguments as List<Question>;
+        var args = settings.arguments as QuizNavigation;
         return _viewMaterialRoute(view: const QuizView(), arguments: args);
       case quizResult:
-        return _viewMaterialRoute(view: const QuizResultView());
+        var args = settings.arguments as ResultNavigation;
+        return _viewMaterialRoute(
+            view: const QuizResultView(), arguments: args);
       case viewInVrView:
         final planet3dModelPath = settings.arguments as String;
+
         return _viewMaterialRoute(
             view: ViewInVrView(planet3dModelPath: planet3dModelPath));
       case explorePlanetView:

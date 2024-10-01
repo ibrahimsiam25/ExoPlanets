@@ -10,9 +10,14 @@ import '../../../../../core/theme/app_text_styles.dart';
 class CustomHollowButton extends StatelessWidget {
   final String text;
   final TextStyle? style;
+  final double? verticalPadding;
   final VoidCallback onTap;
   const CustomHollowButton(
-      {super.key, required this.text, this.style, required this.onTap});
+      {super.key,
+      required this.text,
+      this.style,
+      required this.onTap,
+      this.verticalPadding});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,7 @@ class CustomHollowButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 18.h),
+        padding: EdgeInsets.symmetric(vertical: verticalPadding ?? 18.h),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.r),
             border: Border.all(color: AppColors.white, width: 2)),

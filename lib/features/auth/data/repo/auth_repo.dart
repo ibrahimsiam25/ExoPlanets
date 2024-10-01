@@ -108,4 +108,37 @@ class AuthRepo {
       return left(ServerFailure(errMessage: "Something went wrong"));
     }
   }
+
+  Future<Either<Failure, void>> updateUserImage(String imageUrl) async {
+    try {
+      await firestore
+          .collection("users")
+          .doc(auth.currentUser!.uid)
+          .update({"imageUrl": imageUrl});
+      auth.currentUser!.updatePhotoURL(imageUrl);
+      return right(null);
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        return left(ServerFailure.fromFirebaseException(e));
+      }
+      log(e.toString());
+      return left(ServerFailure(errMessage: "Something went wrong"));
+    }
+  }
+
+  Future<Either<Failure, UserModel?>> getUserFromFirestore() async {
+    try {
+      DocumentSnapshot<Map<String, dynamic>> userJson =
+          await firestore.collection("users").doc(auth.currentUser!.uid).get();
+      UserModel? user =
+          userJson.data() != null ? UserModel.fromJson(userJson.data()!) : null;
+      return right(user);
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        return left(ServerFailure.fromFirebaseException(e));
+      }
+      log(e.toString());
+      return left(ServerFailure(errMessage: "Something went wrong"));
+    }
+  }
 }

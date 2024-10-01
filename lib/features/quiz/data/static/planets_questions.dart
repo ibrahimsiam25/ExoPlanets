@@ -1,6 +1,6 @@
-import 'package:exo_planets/features/quiz/data/models/questions.dart';
+import 'package:exo_planets/features/quiz/data/models/questions/questions.dart';
 
-import '../models/question.dart';
+import '../models/questions/question.dart';
 
 Map<String, dynamic> proximaBQuestions = {
   "questions": [
@@ -58,6 +58,182 @@ Map<String, dynamic> proximaBQuestions = {
         "No water"
       ],
       "correct_answer": "Radiation from its star"
+    }
+  ]
+};
+Map<String, dynamic> kepler452bQuestions = {
+  "questions": [
+    {
+      "question": "What nickname is often given to Kepler-452b?",
+      "options": [
+        "Earth's twin",
+        "Earth's older cousin",
+        "The second Earth",
+        "The blue planet"
+      ],
+      "correct_answer": "Earth's older cousin"
+    },
+    {
+      "question": "How far is Kepler-452b from Earth?",
+      "options": [
+        "1,400 light-years",
+        "500 light-years",
+        "40 light-years",
+        "10,000 light-years"
+      ],
+      "correct_answer": "1,400 light-years"
+    },
+    {
+      "question": "What type of star does Kepler-452b orbit?",
+      "options": [
+        "A red dwarf star",
+        "A yellow G-type star, similar to our Sun",
+        "A neutron star",
+        "A white dwarf star"
+      ],
+      "correct_answer": "A yellow G-type star, similar to our Sun"
+    },
+    {
+      "question": "How long is a year on Kepler-452b compared to Earth?",
+      "options": [
+        "100 Earth days",
+        "385 Earth days",
+        "200 Earth days",
+        "600 Earth days"
+      ],
+      "correct_answer": "385 Earth days"
+    },
+    {
+      "question": "Why is Kepler-452b considered a candidate for habitability?",
+      "options": [
+        "It has an oxygen-rich atmosphere",
+        "It is located in its star's habitable zone, where liquid water might exist",
+        "It has visible oceans",
+        "It has already shown signs of life"
+      ],
+      "correct_answer":
+          "It is located in its star's habitable zone, where liquid water might exist"
+    },
+    {
+      "question": "How does the size of Kepler-452b compare to Earth?",
+      "options": [
+        "It is smaller than Earth",
+        "It is roughly the same size as Earth",
+        "It is about 60% larger than Earth",
+        "It is 10 times larger than Earth"
+      ],
+      "correct_answer": "It is about 60% larger than Earth"
+    },
+    {
+      "question": "How old is Kepler-452, the star Kepler-452b orbits?",
+      "options": [
+        "1 billion years",
+        "4.5 billion years",
+        "6 billion years",
+        "10 billion years"
+      ],
+      "correct_answer": "6 billion years"
+    },
+    {
+      "question":
+          "What makes Kepler-452b’s potential habitability challenging?",
+      "options": [
+        "It has a very thick atmosphere that traps too much heat",
+        "It might have undergone a runaway greenhouse effect, making the surface too hot",
+        "It has a very short orbital period, creating extreme climate variations",
+        "Its atmosphere contains high levels of toxic gases"
+      ],
+      "correct_answer":
+          "It might have undergone a runaway greenhouse effect, making the surface too hot"
+    }
+  ]
+};
+Map<String, dynamic> gliese581Questions = {
+  "questions": [
+    {
+      "question": "Where is Gliese 581g located?",
+      "options": [
+        "In the Andromeda Galaxy",
+        "In the Gliese 581 star system",
+        "In the Alpha Centauri system",
+        "In the TRAPPIST-1 system"
+      ],
+      "correct_answer": "In the Gliese 581 star system"
+    },
+    {
+      "question": "What type of planet is Gliese 581g believed to be?",
+      "options": [
+        "A gas giant",
+        "A rocky, Earth-like planet",
+        "An ice giant",
+        "A super-Earth"
+      ],
+      "correct_answer": "A rocky, Earth-like planet"
+    },
+    {
+      "question": "How far away is Gliese 581g from Earth?",
+      "options": [
+        "10 light-years",
+        "20 light-years",
+        "50 light-years",
+        "100 light-years"
+      ],
+      "correct_answer": "20 light-years"
+    },
+    {
+      "question": "What type of star does Gliese 581g orbit?",
+      "options": [
+        "A yellow dwarf star",
+        "A red dwarf star",
+        "A blue giant star",
+        "A neutron star"
+      ],
+      "correct_answer": "A red dwarf star"
+    },
+    {
+      "question": "Why is Gliese 581g considered a candidate for habitability?",
+      "options": [
+        "It has a breathable atmosphere",
+        "It orbits in the habitable zone of its star, where liquid water could exist",
+        "It has a surface covered in ice",
+        "It is larger than Earth"
+      ],
+      "correct_answer":
+          "It orbits in the habitable zone of its star, where liquid water could exist"
+    },
+    {
+      "question": "What is the orbital period of Gliese 581g around its star?",
+      "options": [
+        "37 Earth days",
+        "67 Earth days",
+        "13 Earth days",
+        "365 Earth days"
+      ],
+      "correct_answer": "13 Earth days"
+    },
+    {
+      "question":
+          "What makes Gliese 581g different from Earth in terms of its climate?",
+      "options": [
+        "It is tidally locked, meaning one side always faces its star",
+        "It has a similar day-night cycle as Earth",
+        "It has a polar ice cap that covers half the planet",
+        "It has a thin atmosphere like Mars"
+      ],
+      "correct_answer":
+          "It is tidally locked, meaning one side always faces its star"
+    },
+    {
+      "question":
+          "Why is Gliese 581g's existence controversial among astronomers?",
+      "options": [
+        "It was destroyed by an asteroid",
+        "Its discovery has been debated, and some astronomers question whether it actually exists",
+        "It orbits too close to a black hole",
+        "It is constantly changing its orbit"
+      ],
+      "correct_answer":
+          "Its discovery has been debated, and some astronomers question whether it actually exists"
     }
   ]
 };
@@ -386,6 +562,8 @@ Map<String, dynamic> vestaQuestions = {
 
 List<Map<String, dynamic>> quizesList = [
   proximaBQuestions,
+  kepler452bQuestions,
+  gliese581Questions,
   wasp12bQuestions,
   cancrieQuestions,
   kepler22bQuestions,

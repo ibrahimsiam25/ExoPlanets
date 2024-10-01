@@ -33,6 +33,7 @@ class CustomLoginForm extends StatelessWidget {
           CustomAuthTextFormField(
               hintText: "Password",
               controller: passwordController,
+              obscureText: true,
               suffixIcon: Icons.lock_outline),
           vGap(10),
           Align(

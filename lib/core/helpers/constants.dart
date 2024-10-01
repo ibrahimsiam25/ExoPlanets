@@ -1,3 +1,4 @@
+import 'package:exo_planets/features/leadersboard/presentation/views/leadersboard_view.dart';
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/helpers/app_assets.dart';
@@ -21,6 +22,14 @@ class Constants {
       colors: [
         AppColors.lightRed,
         AppColors.darkerRed,
+      ],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      stops: [0, 1]);
+  static const LinearGradient customGreenGradient = LinearGradient(
+      colors: [
+        AppColors.lighterGreen,
+        AppColors.darkerGreen,
       ],
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
@@ -85,6 +94,7 @@ class Constants {
     PlanetsView(),
     SelectQuizView(),
     SettingsView(),
+    LeadersboardView()
   ];
 
   static const List<String> images = [
@@ -101,6 +111,8 @@ class Constants {
   ];
   static const List<String> quizImages = [
     AppAssets.proximaQuiz,
+    AppAssets.kepler452bQuiz,
+    AppAssets.gliese581gQuiz,
     AppAssets.waspQuiz,
     AppAssets.cancri55Quiz,
     AppAssets.kepler22Quiz,

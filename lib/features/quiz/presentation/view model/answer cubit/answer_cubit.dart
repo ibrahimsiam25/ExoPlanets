@@ -22,8 +22,8 @@ class AnswerCubit extends Cubit<AnswerState> {
   }
 
   @override
-  void onChange(Change<AnswerState> change) {
-    log(change.toString());
-    super.onChange(change);
+  Future<void> close() {
+    log("answer cubit closed");
+    return super.close();
   }
 }

@@ -1,3 +1,5 @@
+import 'package:exo_planets/core/DI/dependency_injection.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
@@ -27,10 +29,14 @@ class EditProfileCard extends StatelessWidget {
             style: AppTextStyles.font15WhiteW500,
           ),
           vGap(8.0),
-          const SettingsProfileAvatar(),
+          SettingsProfileAvatar(
+            imageUrl: getIt.get<FirebaseAuth>().currentUser?.photoURL,
+          ),
           vGap(8.0),
           Text(
-            'Batman',
+            getIt.get<FirebaseAuth>().currentUser == null
+                ? "unknown user"
+                : getIt.get<FirebaseAuth>().currentUser!.displayName ?? 'user',
             style: AppTextStyles.font15WhiteW500,
           ),
           vGap(4.0),
@@ -44,7 +50,9 @@ class EditProfileCard extends StatelessWidget {
           ),
           vGap(4.0),
           Text(
-            'contactadelgabr@gmail.com',
+            getIt.get<FirebaseAuth>().currentUser == null
+                ? ""
+                : getIt.get<FirebaseAuth>().currentUser!.email ?? '',
             style: AppTextStyles.font10WhiteNormal,
           ),
           vGap(40.0),

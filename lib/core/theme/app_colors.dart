@@ -18,4 +18,6 @@ class AppColors {
   static const Color greyofBackgroundForExplaroe = Color(0xFF0e0e0e);
   static const Color lightRed = Color(0xFFED3A3A);
   static const Color darkerRed = Color(0xFFC62222);
+  static const Color lighterGreen = Color(0xFF30AE3C);
+  static const Color darkerGreen = Color(0xFF22C632);
 }
