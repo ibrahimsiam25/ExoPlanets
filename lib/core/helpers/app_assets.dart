@@ -40,7 +40,8 @@ class AppAssets {
   static const String rocket = 'assets/images/rocket.png';
   static const String anArrowPointingAtAPlanet  = 'assets/images/An arrow pointing at a planet.png';
   static const String halfCircle  = 'assets/images/half_circle.png';
-
+  static const String backIcon  = 'assets/images/Back.png';
+  
  ////////////////////// images of planets ////////////////////////////////////////////
  static const String planet1 = 'assets/images/1.png';
  static const String planet2 = 'assets/images/2.png';
@@ -51,7 +52,24 @@ class AppAssets {
  static const String planet7 = 'assets/images/7.png';
  static const String planet8 = 'assets/images/8.png';
 
-
+////////////////////// images of explore ////////////////////////////////////////////
+static const String exoPlanet1 = 'assets/images/ex1.png';
+static const String exoPlanet2 = 'assets/images/ex1.png';
+static const String exoPlanet3 = 'assets/images/ex1.png';
+static const String exoPlanet4 = 'assets/images/ex4.png';
+static const String exoPlanet5 = 'assets/images/ex5.png';
+static const String exoPlanet6 = 'assets/images/ex6.png';
+static const String exoPlanet7 = 'assets/images/ex7.png';
+static const String exoPlanet8 = 'assets/images/ex8.png';
+////////////////////// images of yotube ////////////////////////////////////////////
+static const String youtube1 = 'assets/images/youtube1.png';
+static const String youtube2 = 'assets/images/youtube1.png';
+static const String youtube3 = 'assets/images/youtube1.png';
+static const String youtube4 = 'assets/images/youtube4.png';
+static const String youtube5 = 'assets/images/youtube5.png';
+static const String youtube6 = 'assets/images/youtube6.png';
+static const String youtube7 = 'assets/images/youtube7.png';
+static const String youtube8 = 'assets/images/youtube8.png';
  ////////////////////// 3d models of planets ////////////////////////////////////////////
   static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
   static const String planetKepler452b3DModel = "assets/3d/Kepler-452b.glb";
