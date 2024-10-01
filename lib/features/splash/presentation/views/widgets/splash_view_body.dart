@@ -1,3 +1,5 @@
+import 'package:exo_planets/core/DI/dependency_injection.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/routes/app_router.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
@@ -6,7 +8,6 @@ import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import '../../../../../core/helpers/shared_pref_helper.dart';
-
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -87,7 +88,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(const Duration(milliseconds: 3500), () async {
       context.pushReplacementNamed(
         await SharedPrefHelper.getBool("isOnBoardingViewed")
-            ? AppRouter.auth
+            ? getIt.get<FirebaseAuth>().currentUser == null
+                ? AppRouter.auth
+                : AppRouter.bottomNavigationBar
             : AppRouter.onboarding,
       );
     });
