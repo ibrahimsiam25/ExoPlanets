@@ -52,8 +52,11 @@ class CustomAppBar extends StatelessWidget {
                             snapshot.data()?["imageUrl"] ?? "Unknown"),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(
-                          child: CircularProgressIndicator(),
+                        return Center(
+                          child: SizedBox(
+                              width: 25.w,
+                              height: 25.h,
+                              child: const CircularProgressIndicator()),
                         );
                       } else if (snapshot.hasError) {
                         log(snapshot.error.toString());

@@ -21,7 +21,5 @@ void main() async {
         statusBarColor: Colors.transparent,
         systemStatusBarContrastEnforced: true),
   );
-  // make flutter draw behind navigation bar
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   runApp(const ExoPlanetsApp());
 }
