@@ -53,10 +53,13 @@ class CustomAppBar extends StatelessWidget {
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return Center(
-                          child: SizedBox(
-                              width: 25.w,
-                              height: 25.h,
-                              child: const CircularProgressIndicator()),
+                          child: Padding(
+                            padding: EdgeInsets.all(12.r),
+                            child: SizedBox(
+                                width: 25.w,
+                                height: 25.h,
+                                child: const CircularProgressIndicator()),
+                          ),
                         );
                       } else if (snapshot.hasError) {
                         log(snapshot.error.toString());
