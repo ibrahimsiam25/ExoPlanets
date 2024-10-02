@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import '../manager/home_cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/core/widgets/custom_app_bar.dart';
+import 'package:exo_planets/core/DI/dependency_injection.dart';
 import 'package:exo_planets/core/static/static_planet_data.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_plenet_view.dart';
 import 'package:exo_planets/features/home/presentation/widgets/custom_navigation_row.dart';
@@ -46,7 +48,7 @@ class HomeViewBody extends StatelessWidget {
                 const CustomAppBar(),
                 vGap(40),
                 Text(
-                  "Hi Adel,",
+                  getIt.get<FirebaseAuth>().currentUser?.displayName ?? 'user',
                   style: AppTextStyles.font14GrayW400,
                 ),
                 Text(
