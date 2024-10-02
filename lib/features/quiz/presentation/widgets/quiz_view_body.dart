@@ -3,7 +3,7 @@ import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/features/quiz/data/models/quiz%20navigation/quiz_navigation.dart';
-import 'package:exo_planets/features/quiz/data/models/result%20navigation%20/result_navigation.dart';
+import 'package:exo_planets/features/quiz/data/models/result%20navigation/result_navigation.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/answer%20cubit/answer_cubit.dart';
 import 'package:exo_planets/features/quiz/presentation/view%20model/update%20points%20cubit/update_points_cubit.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_question_number_close_row.dart';

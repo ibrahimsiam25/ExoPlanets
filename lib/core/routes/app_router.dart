@@ -13,7 +13,7 @@ import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.d
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:exo_planets/features/quiz/data/models/quiz%20navigation/quiz_navigation.dart';
-import 'package:exo_planets/features/quiz/data/models/result%20navigation%20/result_navigation.dart';
+import 'package:exo_planets/features/quiz/data/models/result%20navigation/result_navigation.dart';
 
 class AppRouter {
   static const String onboarding = '/onboarding';
