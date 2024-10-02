@@ -35,7 +35,7 @@ class LeadersboardViewBody extends StatelessWidget {
                     return const Center(
                       child: Text('Something went wrong'),
                     );
-                  } else if (snapshot.hasData) {
+                  } else if (snapshot.hasData && snapshot.data!.length >= 3) {
                     return Column(
                       children: [
                         CustomTopThreeContainer(
