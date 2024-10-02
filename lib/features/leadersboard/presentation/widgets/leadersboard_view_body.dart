@@ -54,6 +54,7 @@ class LeadersboardViewBody extends StatelessWidget {
                   }
                 }),
           ),
+          vGap(50)
         ],
       ),
     );
