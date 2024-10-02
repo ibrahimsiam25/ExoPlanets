@@ -1,3 +1,5 @@
+import 'package:exo_planets/core/DI/dependency_injection.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../manager/home_cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -46,7 +48,7 @@ class HomeViewBody extends StatelessWidget {
                 const CustomAppBar(),
                 vGap(40),
                 Text(
-                  "Hi Adel,",
+                  "Hi ${getIt.get<FirebaseAuth>().currentUser!.displayName}",
                   style: AppTextStyles.font14GrayW400,
                 ),
                 Text(

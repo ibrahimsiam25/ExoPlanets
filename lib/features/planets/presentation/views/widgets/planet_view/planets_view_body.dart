@@ -79,9 +79,12 @@ class _PlanetsViewBodyState extends State<PlanetsViewBody> {
           ),
           // Positioned arrow image
           Positioned(
-            left: context.width * 0.27,
+            left: context.width * 0.29,
             top: context.height * 0.4,
-            child: Image.asset(AppAssets.anArrowPointingAtAPlanet),
+            child: SizedBox(
+              height: context.height * 0.13,
+              child: Image.asset(AppAssets.anArrowPointingAtAPlanet),
+            ),
           ),
           // Positioned PageView with defined size
           Positioned(
@@ -124,8 +127,9 @@ class _PlanetsViewBodyState extends State<PlanetsViewBody> {
                   text: "Explore planet",
                   onTap: () {
                     context.pushNamed(AppRouter.explorePlanetView,
-                    arguments: planetData[context.read<PlanetsCubit>().currentIndex]
-                    );                  },
+                        arguments: planetData[
+                            context.read<PlanetsCubit>().currentIndex]);
+                  },
                   style: AppTextStyles.font20WhiteW500),
             ),
           ),
