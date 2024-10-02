@@ -5,7 +5,7 @@ import 'package:exo_planets/core/routes/app_router.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/custom_hollow_button.dart';
 import 'package:exo_planets/features/quiz/data/models/quiz%20navigation/quiz_navigation.dart';
-import 'package:exo_planets/features/quiz/data/models/result%20navigation%20/result_navigation.dart';
+import 'package:exo_planets/features/quiz/data/models/result%20navigation/result_navigation.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_bottom_screen_button.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/quiz_views_background.dart';
 import 'package:exo_planets/features/quiz/presentation/widgets/result_container.dart';
